@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request Consultation - Glenorchy Capital</title>
+    <meta name="description" content="Schedule your private consultation with Glenorchy Capital portfolio managers. Minimum investment $200K. Accredited investors only.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Ontraport Tracking Script Placeholder -->
+    <!-- ONTRAPORT_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <!-- Google Analytics 4 Placeholder -->
+    <!-- GA4_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <style>
+        :root {
+            --glenorchy-gold: #B89676;
+            --glenorchy-navy: #272727;
+            --glenorchy-dark-blue: #1a3a52;
+            --off-white: #FAFAFA;
+            --warm-grey: #8A8A8A;
+            --steel-blue: #5B7C99;
+            --deep-green: #2D5A3D;
+            --charcoal: #3D3D3D;
+            --font-primary: 'Merriweather', serif;
+            --font-secondary: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--off-white);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.current {
+            color: var(--glenorchy-gold);
+        }
+
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-primary {
+            background-color: var(--glenorchy-gold);
+            color: var(--off-white);
+            border-color: var(--glenorchy-gold);
+        }
+
+        .cta-primary:hover {
+            background-color: var(--glenorchy-dark-blue);
+            border-color: var(--glenorchy-dark-blue);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--off-white) 0%, #f8f8f8 100%);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 3rem 0;
+            background: white;
+            min-height: 70vh;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        .contact-form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--glenorchy-navy);
+        }
+
+        .form-subtitle {
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* Custom Form Styles */
+        .contact-form {
+            text-align: left;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: var(--font-secondary);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--glenorchy-gold);
+        }
+
+        .checkbox-group {
+            margin: 1.5rem 0;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checkbox-group span {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+        }
+
+        .required {
+            color: #dc3545;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--glenorchy-gold);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .submit-button:hover {
+            background: var(--glenorchy-dark-blue);
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-disclaimer {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--warm-grey);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .form-disclaimer a {
+            color: var(--glenorchy-gold);
+            text-decoration: none;
+        }
+
+        .form-disclaimer a:hover {
+            text-decoration: underline;
+        }
+
+        .form-success,
+        .form-error {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .form-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--glenorchy-navy);
+            color: #cccccc;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-column h4 {
+            color: var(--glenorchy-gold);
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-column a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-column a:hover {
+            color: var(--glenorchy-gold);
+        }
+        .footer-address p,
+        .footer-registration p,
+        .footer-contact p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #cccccc;
+        }
+        .footer-registration {
+            margin: 1rem 0;
+        }
+        .footer-disclaimer {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #404040;
+            font-size: 0.85rem;
+            color: #999999;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-bottom {
+            text-align: center;
+            color: #999999;
+            font-size: 0.85rem;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--charcoal);
+            position: relative;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: var(--charcoal);
+            left: 0;
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            top: 8px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-section {
+                padding: 2rem 0;
+            }
+
+            .contact-form-container {
+                padding: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--off-white);
+                flex-direction: column;
+                padding: 1rem;
+                border-top: 1px solid #e5e5e5;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu a {
+                font-size: 1.125rem;
+                padding: 0.75rem 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .footer-columns {
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: left;
+                gap: 2rem;
+                max-width: 900px;
+            }
+        }
+        @media (min-width: 1025px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="site-branding">
+            <a href="/" class="site-logo">Glenorchy Capital</a>
+        </div>
+        <nav class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/strategy">Strategy</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+            
+            <a href="/consultation" class="cta-button cta-primary">Schedule Consultation</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="site-main">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Request Your Portfolio Consultation</h1>
+            <p class="hero-subtitle">
+                Complete the form below to schedule a consultation with our portfolio managers about your investment objectives and our contrarian approach.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="consultation-form">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="form-title">Qualify & Book Your Call</h2>
+                    <p class="form-subtitle">
+                        Tell us about yourself and we'll take you directly to our calendar to select your preferred consultation time.
+                    </p>
+                    
+                    <!-- Custom Consultation Form -->
+                    <form id="consultation-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">First Name <span class="required">*</span></label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name <span class="required">*</span></label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country of Residence <span class="required">*</span></label>
+                            <select id="country" name="country" required>
+                                <option value="">Select your country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="AU">Australia</option>
+                                <option value="NZ">New Zealand</option>
+                                <option value="SG">Singapore</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="AE">UAE</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="SE">Sweden</option>
+                                <option value="NO">Norway</option>
+                                <option value="OTHER">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="accredited" id="accredited" required>
+                                <span>I'm a Qualified Client with min. US$200k to invest <span class="required">*</span></span>
+                            </label>
+                        </div>
+
+                        <!-- Hidden field for Ontraport referral ID -->
+                        <input type="hidden" id="orid" name="orid" value="">
+
+                        <button type="submit" class="submit-button">
+                            Next: Select Date & Time
+                        </button>
+
+                        <div class="form-disclaimer">
+                            <p>By submitting this form, you agree to our <a href="/legal/privacy" target="_blank">Privacy Policy</a>. Your information will be processed securely and you'll be redirected to schedule your consultation.</p>
+                        </div>
+
+                        <div class="form-success" style="display: none;">
+                            <h3>Thank You!</h3>
+                            <p>Your information has been received. Redirecting you to select your consultation time...</p>
+                        </div>
+
+                        <div class="form-error" style="display: none;">
+                            <p>There was an error submitting your request. Please try again or email us directly at admin@glenorchycapital.net</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Glenorchy Capital</h4>
+                    <div class="footer-address">
+                        <p>257 Desmond's Road<br>
+                        Boorolite, Victoria 3723<br>
+                        Australia</p>
+                    </div>
+                    <div class="footer-registration">
+                        <p><small>BVI Company no. 197 5524<br>
+                        BVI Approved Investment Manager IBR/AIM/18/0235<br>
+                        United States CRD #: 305636 / SEC #: 801-117456</small></p>
+                    </div>
+                    <div class="footer-contact">
+                        <p><a href="mailto:admin@glenorchycapital.net">admin@glenorchycapital.net</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/strategy">Strategy</a></li>
+                        <li><a href="/fees">Fees</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="https://glenorchycapital.net/wp-content/uploads/2025/03/Glenorchy-Capital-Form-ADV-2A_2B-2025.pdf" target="_blank">Brochure</a></li>
+                        <li><a href="https://reports.adviserinfo.sec.gov/crs/crs_305636.pdf" target="_blank">CRS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/terms">Terms</a></li>
+                        <li><a href="/legal/privacy">Privacy</a></li>
+                        <li><a href="/legal/disclaimer">Disclaimer</a></li>
+                        <li><a href="/legal/performance-disclaimer">Performance Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Glenorchy Capital Ltd. is registered in the British Virgin Islands and has an Approved Investment Manager license issued by the BVI Financial Services Commission. Glenorchy is registered with the United States Securities and Exchange Commission as an investment adviser. Such registration does not imply that the firm or any of its employees have qualifications, skills, or training in the business of advising people on their financial affairs.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glenorchy Capital Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript for form submission and Calendly redirect -->
+<script>
+    // ======================================
+    // CONFIGURATION - UPDATE THESE VALUES
+    // ======================================
+    
+    // ZAPIER WEBHOOK URL - This will receive form data and push to Ontraport
+    // Replace with your actual Zapier webhook URL once created
+    const WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE'; // e.g., 'https://hooks.zapier.com/hooks/catch/123456/abc123/'
+    
+    // CALENDLY BOOKING URL
+    const CALENDLY_URL = 'https://calendly.com/d/ckr-fbt-87k/introductory-call';
+    
+    // ======================================
+    // URL PARAMETER CAPTURE (FOR AFFILIATE TRACKING)
+    // ======================================
+    
+    function getUrlParams() {
+        const params = {};
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Capture Ontraport referral ID (most important!)
+        if (urlParams.get('orid')) {
+            params.orid = urlParams.get('orid');
+            // Store in hidden field
+            document.getElementById('orid').value = urlParams.get('orid');
+        }
+        
+        // Capture UTM parameters if present
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(param => {
+            if (urlParams.get(param)) {
+                params[param] = urlParams.get(param);
+            }
+        });
+        
+        // Capture other tracking parameters
+        ['ref', 'partner', 'affiliate', 'source'].forEach(param => {
+            if (urlParams.get(param)) {
+                params[param] = urlParams.get(param);
+            }
+        });
+        
+        return params;
+    }
+    
+    // Store tracking parameters in session storage for persistence
+    function storeTrackingParams() {
+        const params = getUrlParams();
+        if (Object.keys(params).length > 0) {
+            sessionStorage.setItem('gc_tracking', JSON.stringify(params));
+        }
+    }
+    
+    // ======================================
+    // FORM SUBMISSION HANDLER
+    // ======================================
+    
+    document.getElementById('consultation-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('.submit-button');
+        const successMsg = this.querySelector('.form-success');
+        const errorMsg = this.querySelector('.form-error');
+        
+        // Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Processing...';
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = {
+            // Contact information
+            first_name: formData.get('first_name'),
+            last_name: formData.get('last_name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            country: formData.get('country'),
+            accredited: formData.get('accredited') ? true : false,
+            
+            // Tracking information
+            orid: formData.get('orid') || '',
+            
+            // Additional metadata
+            timestamp: new Date().toISOString(),
+            source: 'Glenorchy Capital Website',
+            page_url: window.location.href,
+            
+            // Add any stored tracking parameters
+            ...JSON.parse(sessionStorage.getItem('gc_tracking') || '{}')
+        };
+        
+        try {
+            // Submit to webhook (which will push to Ontraport)
+            const response = await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (response.ok || WEBHOOK_URL === 'YOUR_ZAPIER_WEBHOOK_URL_HERE') {
+                // Show success message
+                successMsg.style.display = 'block';
+                errorMsg.style.display = 'none';
+                this.style.display = 'none';
+                
+                // Track conversion if Google Analytics is present
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'consultation_request', {
+                        'event_category': 'engagement',
+                        'event_label': 'consultation_form'
+                    });
+                }
+                
+                // Build Calendly URL with prefilled parameters
+                const calendlyParams = new URLSearchParams({
+                    name: `${data.first_name} ${data.last_name}`,
+                    email: data.email,
+                    a1: data.phone, // Phone as answer 1
+                    a2: data.country, // Country as answer 2
+                    hide_event_type_details: '1',
+                    hide_gdpr_banner: '1',
+                    primary_color: 'b89676'
+                });
+                
+                // Add tracking parameters to Calendly URL
+                if (data.orid) {
+                    calendlyParams.append('a3', `ORID: ${data.orid}`); // Pass ORID as answer 3
+                }
+                
+                const finalCalendlyUrl = `${CALENDLY_URL}?${calendlyParams.toString()}`;
+                
+                // Redirect to Calendly after 2 seconds
+                setTimeout(() => {
+                    window.location.href = finalCalendlyUrl;
+                }, 2000);
+                
+            } else {
+                throw new Error('Submission failed');
+            }
+            
+        } catch (error) {
+            console.error('Form submission error:', error);
+            
+            // Show error message
+            errorMsg.style.display = 'block';
+            successMsg.style.display = 'none';
+            
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Next: Select Date & Time';
+        }
+    });
+    
+    // ======================================
+    // MOBILE MENU TOGGLE
+    // ======================================
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Store tracking parameters on page load
+        storeTrackingParams();
+        
+        // Mobile menu functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

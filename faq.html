@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Glenorchy Capital</title>
+    <meta name="description" content="Frequently asked questions about Glenorchy Capital's investment process, qualification requirements, fees, and client service.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Ontraport Tracking Script Placeholder -->
+    <!-- ONTRAPORT_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <!-- Google Analytics 4 Placeholder -->
+    <!-- GA4_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --glenorchy-gold: #B89676;
+            --glenorchy-navy: #272727;
+            --glenorchy-dark-blue: #1a3a52;
+            --off-white: #FAFAFA;
+            --warm-grey: #8A8A8A;
+            --steel-blue: #5B7C99;
+            --deep-green: #2D5A3D;
+            --charcoal: #3D3D3D;
+            --font-primary: 'Merriweather', serif;
+            --font-secondary: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        /* Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-primary);
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--off-white);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.current {
+            color: var(--glenorchy-gold);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-primary {
+            background-color: var(--glenorchy-gold);
+            color: var(--off-white);
+            border-color: var(--glenorchy-gold);
+        }
+
+        .cta-primary:hover {
+            background-color: var(--glenorchy-dark-blue);
+            border-color: var(--glenorchy-dark-blue);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f6f3 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .faq-hero .hero-title {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            color: var(--glenorchy-navy);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666666;
+            margin-bottom: 48px;
+            font-weight: 400;
+        }
+
+        .faq-nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .faq-nav-link {
+            background: white;
+            color: var(--glenorchy-navy);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e5e5;
+        }
+
+        .faq-nav-link:hover {
+            background: var(--glenorchy-gold);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        .faq-section {
+            padding: 80px 0;
+        }
+
+        .faq-section:nth-child(even) {
+            background: #f8f6f3;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* FAQ Grid */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            color: var(--glenorchy-navy);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #555555;
+        }
+
+        .faq-answer p {
+            margin-bottom: 12px;
+        }
+
+        .faq-answer ul {
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+            color: #666666;
+        }
+
+        .faq-answer strong {
+            color: var(--glenorchy-navy);
+        }
+
+        /* Still Have Questions Section */
+        .still-questions {
+            background: linear-gradient(135deg, var(--glenorchy-dark-blue) 0%, var(--glenorchy-navy) 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .still-questions h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .still-questions p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .questions-cta .btn {
+            display: inline-block;
+            background: var(--glenorchy-gold);
+            color: var(--glenorchy-navy);
+            padding: 18px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 16px;
+        }
+
+        .questions-cta .btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .consultation-note {
+            font-size: 0.9rem;
+            color: #cccccc;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-content > p {
+            font-size: 1.1rem;
+            color: #555555;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: var(--glenorchy-gold);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--glenorchy-dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--glenorchy-navy);
+            border: 2px solid var(--glenorchy-navy);
+        }
+
+        .btn-secondary:hover {
+            background: var(--charcoal);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--charcoal);
+            color: #cccccc;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-column h4 {
+            color: var(--glenorchy-gold);
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-column a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-column a:hover {
+            color: var(--glenorchy-gold);
+        }
+        .footer-address p,
+        .footer-registration p,
+        .footer-contact p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #cccccc;
+        }
+        .footer-registration {
+            margin: 1rem 0;
+        }
+        .footer-disclaimer {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #404040;
+            font-size: 0.85rem;
+            color: #999999;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-bottom {
+            text-align: center;
+            color: #999999;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .faq-nav {
+                gap: 16px;
+            }
+
+            .faq-nav-link {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .faq-hero .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .faq-section {
+                padding: 48px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .faq-item {
+                padding: 24px;
+            }
+
+            .faq-nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .faq-nav-link {
+                width: 200px;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .faq-section {
+                padding: 40px 0;
+            }
+
+            .hero-section {
+                padding: 48px 0;
+            }
+
+            .faq-hero .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .still-questions {
+                padding: 48px 0;
+            }
+
+            .still-questions h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .footer-columns {
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: left;
+                gap: 2rem;
+                max-width: 900px;
+            }
+        }
+        @media (min-width: 1025px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--charcoal);
+            position: relative;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: var(--charcoal);
+            left: 0;
+        }
+        .hamburger::before {
+            top: -8px;
+        }
+        .hamburger::after {
+            top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--off-white);
+                flex-direction: column;
+                padding: 1rem;
+                border-top: 1px solid #e5e5e5;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                font-size: 1.125rem;
+                padding: 0.75rem 0;
+                text-decoration: none;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="site-branding">
+            <a href="/" class="site-logo">Glenorchy Capital</a>
+        </div>
+        <nav class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/strategy">Strategy</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+            
+            <a href="/consultation" class="cta-button cta-primary">Schedule Consultation</a>
+        </nav>
+    </div>
+</header>
+
+<main class="site-main faq-page">
+    
+    <!-- Hero Section -->
+    <section class="hero-section faq-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Frequently Asked Questions
+                </h1>
+                <p class="hero-subtitle">
+                    Clear answers to help you make an informed investment decision
+                </p>
+                
+                <div class="faq-nav">
+                    <a href="#qualification" class="faq-nav-link">Qualification</a>
+                    <a href="#investment-process" class="faq-nav-link">Investment Process</a>
+                    <a href="#fees-structure" class="faq-nav-link">Fees & Structure</a>
+                    <a href="#performance" class="faq-nav-link">Performance</a>
+                    <a href="#operations" class="faq-nav-link">Operations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Questions -->
+    <section class="faq-section" id="qualification">
+        <div class="container">
+            <div class="section-header">
+                <h2>Qualification & Requirements</h2>
+                <p class="section-subtitle">Understanding who we work with and why</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">What is the minimum investment amount?</h3>
+                    <div class="faq-answer">
+                        <p>Our minimum investment is $200,000. This threshold ensures meaningful portfolio allocation and cost-effective management while keeping institutional-quality investment management accessible to successful professionals and business owners.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Do I need to be an accredited investor?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, SEC regulations require accredited investor status. This means either:</p>
+                        <ul>
+                            <li>Individual income exceeding $200,000 (or $300,000 with spouse) for the last 2 years</li>
+                            <li>Net worth exceeding $1 million (excluding primary residence)</li>
+                            <li>Certain professional certifications (Series 7, 65, 82)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Why do you have geographic restrictions?</h3>
+                    <div class="faq-answer">
+                        <p>We don't restrict by geography - we welcome qualified investors globally. However, we focus on English-speaking markets for communication efficiency and regulatory familiarity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What time horizon do you recommend?</h3>
+                    <div class="faq-answer">
+                        <p>Minimum 3+ years, ideally 5-10 years. Our contrarian approach requires patience - we invest in unloved sectors that may take time to recover. Short-term investors are not a good fit for our strategy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I invest retirement funds?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, we work with qualified custodians for IRA, 401(k) rollovers, and other retirement accounts. Many clients use this as a diversification strategy within their retirement portfolio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you work with investment advisors and family offices?</h3>
+                    <div class="faq-answer">
+                        <p>Absolutely. We work with RIAs, family offices, and other professional intermediaries. We provide institutional-level reporting and communication to meet their client service requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Process Questions -->
+    <section class="faq-section" id="investment-process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investment Process & Strategy</h2>
+                <p class="section-subtitle">How we invest and manage portfolios</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How is this different from a mutual fund?</h3>
+                    <div class="faq-answer">
+                        <p>Key differences:</p>
+                        <ul>
+                            <li><strong>Personalized:</strong> Direct relationship with portfolio managers</li>
+                            <li><strong>Aligned:</strong> We invest our substantial personal capital alongside yours</li>
+                            <li><strong>Concentrated:</strong> Focused positions vs. over-diversified funds</li>
+                            <li><strong>Flexible:</strong> Can adapt strategy based on opportunities</li>
+                            <li><strong>Transparent:</strong> You see exactly what you own</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What makes your approach "contrarian"?</h3>
+                    <div class="faq-answer">
+                        <p>We systematically invest in sectors that are widely hated, overlooked, or trading at substantial discounts. When everyone else is selling, we're often buying. This requires strong conviction and patience, but historically produces asymmetric returns.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How often do you trade?</h3>
+                    <div class="faq-answer">
+                        <p>We're long-term investors, not traders. Portfolio turnover is typically 20-40% annually - we only trade when fundamentals change or better opportunities emerge. This reduces costs and tax drag.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you use leverage or derivatives?</h3>
+                    <div class="faq-answer">
+                        <p>No leverage on the portfolio level. We may use derivatives occasionally for hedging specific risks, but our core approach focuses on owning high-quality companies at attractive valuations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What asset classes do you invest in?</h3>
+                    <div class="faq-answer">
+                        <p>Primarily public equities across global markets. We may also invest in:</p>
+                        <ul>
+                            <li>REITs and real estate securities</li>
+                            <li>Commodity-related equities</li>
+                            <li>Select fixed income opportunities</li>
+                            <li>Cash for opportunistic deployment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How do you manage risk?</h3>
+                    <div class="faq-answer">
+                        <p>Multiple layers of risk management:</p>
+                        <ul>
+                            <li>Position sizing limits (max 10% per holding)</li>
+                            <li>Geographic diversification</li>
+                            <li>Quality screening for balance sheet strength</li>
+                            <li>Liquidity requirements for all positions</li>
+                            <li>Regular portfolio stress testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees & Structure Questions -->
+    <section class="faq-section" id="fees-structure">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fees & Structure</h2>
+                <p class="section-subtitle">Understanding our fee structure and alignment</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I negotiate your fees?</h3>
+                    <div class="faq-answer">
+                        <p>Our fee structure is standardized to ensure fairness across all clients. Accounts above $1 million may qualify for reduced management fees on the incremental amount.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What exactly does the management fee cover?</h3>
+                    <div class="faq-answer">
+                        <p>The 2% annual management fee covers:</p>
+                        <ul>
+                            <li>Continuous research and analysis</li>
+                            <li>Portfolio construction and rebalancing</li>
+                            <li>Risk monitoring and reporting</li>
+                            <li>Direct access to portfolio managers</li>
+                            <li>All compliance and regulatory costs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How does the high-water mark work?</h3>
+                    <div class="faq-answer">
+                        <p>Performance fees are only charged on profits above your highest previous account value. If your account declines, we don't earn performance fees until it recovers to a new high. You never pay performance fees twice on the same gains.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Are there any hidden fees?</h3>
+                    <div class="faq-answer">
+                        <p>No. The only additional costs are standard third-party expenses:</p>
+                        <ul>
+                            <li>Brokerage commissions (typically $0-10 per trade)</li>
+                            <li>Custodian fees (varies by custodian)</li>
+                            <li>Wire transfers (if requested)</li>
+                        </ul>
+                        <p>These are pass-through costs, not Glenorchy Capital fees.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">When are fees charged?</h3>
+                    <div class="faq-answer">
+                        <p>Management fees are billed quarterly in advance (0.5% per quarter). Performance fees are calculated and charged annually on December 31st, based only on net gains above the high-water mark.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What happens if I withdraw money mid-year?</h3>
+                    <div class="faq-answer">
+                        <p>Management fees are prorated based on the withdrawal date. Performance fees are calculated on any gains at the time of withdrawal. There are no withdrawal penalties or lock-up periods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Questions -->
+    <section class="faq-section" id="performance">
+        <div class="container">
+            <div class="section-header">
+                <h2>Performance & Track Record</h2>
+                <p class="section-subtitle">Understanding our investment results</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">Can you guarantee returns?</h3>
+                    <div class="faq-answer">
+                        <p>No investment manager can guarantee returns. All investments carry risk of loss. Our approach focuses on risk-adjusted returns over time, not absolute performance guarantees. Past performance does not predict future results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How do you measure success?</h3>
+                    <div class="faq-answer">
+                        <p>We measure success by:</p>
+                        <ul>
+                            <li>Long-term risk-adjusted returns vs. benchmarks</li>
+                            <li>Capital preservation during market downturns</li>
+                            <li>Achieving positive real returns after inflation</li>
+                            <li>Meeting individual client objectives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What benchmarks do you use?</h3>
+                    <div class="faq-answer">
+                        <p>We compare performance against relevant market indices (S&P 500, MSCI World) and inflation measures. However, our goal is absolute returns over full market cycles, not just relative outperformance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How volatile are your returns?</h3>
+                    <div class="faq-answer">
+                        <p>Our contrarian approach can experience periods of underperformance when our sectors are out of favor. However, our focus on quality companies and risk management typically results in lower volatility than pure growth strategies over time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you provide performance attribution?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, quarterly reports include detailed performance attribution by sector, region, and individual holdings. You'll understand exactly what drove portfolio performance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How do tax implications affect returns?</h3>
+                    <div class="faq-answer">
+                        <p>We consider tax efficiency in our investment decisions. Lower portfolio turnover reduces taxable events. We also provide detailed tax reporting to help optimize your overall tax situation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operations Questions -->
+    <section class="faq-section" id="operations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Operations & Client Service</h2>
+                <p class="section-subtitle">Day-to-day account management and service</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">Who will be my primary contact?</h3>
+                    <div class="faq-answer">
+                        <p>You'll have direct access to Chris MacIntosh and Brad McFadden as your portfolio managers. For operational questions, you'll work with our client service team, but the principals remain directly accessible.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How often will I receive reports?</h3>
+                    <div class="faq-answer">
+                        <p>Comprehensive quarterly reports including performance, holdings, attribution, and market commentary. You also have 24/7 online access to view your account and can request additional reports as needed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I add or withdraw money anytime?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, with reasonable notice (typically 5-7 business days for liquidity management). There are no lock-up periods or withdrawal penalties. We do request advance notice for large withdrawals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Where is my money held?</h3>
+                    <div class="faq-answer">
+                        <p>Assets are held at qualified independent custodians (major brokerage firms) in your name. Glenorchy Capital never has custody of your funds - we only have trading authorization to manage the investments.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What happens if something happens to you or your firm?</h3>
+                    <div class="faq-answer">
+                        <p>Your assets remain in your name at the independent custodian. We maintain business continuity plans and appropriate insurance. In the unlikely event of firm closure, your assets would be transferred to another qualified manager or returned to you directly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How do I get started?</h3>
+                    <div class="faq-answer">
+                        <p>Schedule a consultation call to discuss your objectives and our approach. If it's a good mutual fit, we'll provide investment management agreements and work with you to establish accounts. The entire process typically takes 1-2 weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="still-questions">
+        <div class="container">
+            <div class="questions-content">
+                <h2>Still Have Questions?</h2>
+                <p>We believe in complete transparency. If you don't see your question answered here, we're happy to address any concerns during a consultation call.</p>
+                
+                <div class="questions-cta">
+                    <a href="/contact/" class="btn btn-primary btn-large">Schedule a Consultation</a>
+                    <p class="consultation-note">30-minute call with no obligation • Qualified investors only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section faq-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Learn More?</h2>
+                <p>Explore our investment approach and see if Glenorchy Capital aligns with your financial objectives.</p>
+                
+                <div class="cta-buttons">
+                    <a href="/strategy/" class="btn btn-secondary btn-large">Learn Our Strategy</a>
+                    <a href="/performance/" class="btn btn-secondary btn-large">View Track Record</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Glenorchy Capital</h4>
+                    <div class="footer-address">
+                        <p>257 Desmond's Road<br>
+                        Boorolite, Victoria 3723<br>
+                        Australia</p>
+                    </div>
+                    <div class="footer-registration">
+                        <p><small>BVI Company no. 197 5524<br>
+                        BVI Approved Investment Manager IBR/AIM/18/0235<br>
+                        United States CRD #: 305636 / SEC #: 801-117456</small></p>
+                    </div>
+                    <div class="footer-contact">
+                        <p><a href="mailto:admin@glenorchycapital.net">admin@glenorchycapital.net</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/strategy">Strategy</a></li>
+                        <li><a href="/fees">Fees</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="https://glenorchycapital.net/wp-content/uploads/2025/03/Glenorchy-Capital-Form-ADV-2A_2B-2025.pdf" target="_blank">Brochure</a></li>
+                        <li><a href="https://reports.adviserinfo.sec.gov/crs/crs_305636.pdf" target="_blank">CRS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/terms">Terms</a></li>
+                        <li><a href="/legal/privacy">Privacy</a></li>
+                        <li><a href="/legal/disclaimer">Disclaimer</a></li>
+                        <li><a href="/legal/performance-disclaimer">Performance Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Glenorchy Capital Ltd. is registered in the British Virgin Islands and has an Approved Investment Manager license issued by the BVI Financial Services Commission. Glenorchy is registered with the United States Securities and Exchange Commission as an investment adviser. Such registration does not imply that the firm or any of its employees have qualifications, skills, or training in the business of advising people on their financial affairs.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glenorchy Capital Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript for mobile menu toggle -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+        
+        if (menuToggle) {
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        }
+    });
+</script>
+</body>
+</html>

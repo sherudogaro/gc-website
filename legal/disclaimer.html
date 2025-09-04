@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Investment Disclaimer - Glenorchy Capital</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Ontraport Tracking Script Placeholder -->
+    <!-- ONTRAPORT_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <!-- Google Analytics 4 Placeholder -->
+    <!-- GA4_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <style>
+        :root {
+            --glenorchy-gold: #B89676;
+            --glenorchy-navy: #272727;
+            --glenorchy-dark-blue: #1a3a52;
+            --off-white: #FAFAFA;
+            --warm-grey: #8A8A8A;
+            --steel-blue: #5B7C99;
+            --deep-green: #2D5A3D;
+            --charcoal: #3D3D3D;
+            --font-primary: 'Merriweather', serif;
+            --font-secondary: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--off-white);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--glenorchy-gold);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-primary {
+            background-color: var(--glenorchy-gold);
+            color: var(--off-white);
+            border-color: var(--glenorchy-gold);
+        }
+
+        .cta-primary:hover {
+            background-color: var(--glenorchy-dark-blue);
+            border-color: var(--glenorchy-dark-blue);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--glenorchy-navy);
+            position: relative;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: var(--glenorchy-navy);
+            left: 0;
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            top: 8px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--charcoal);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--off-white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu a {
+                font-size: 1.125rem;
+                padding: 0.75rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .main-navigation {
+                gap: 1rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0 4rem 0;
+        }
+
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .legal-header h1 {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: var(--warm-grey);
+            font-size: 0.9rem;
+        }
+
+        .legal-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-section h2 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        .legal-section h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .legal-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        .warning-box {
+            background: #dc3545;
+            color: white;
+            border-radius: 6px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .warning-box h2, .warning-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box p, .warning-box ul, .warning-box li {
+            color: white;
+        }
+
+        .warning-box ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 1rem auto;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .risk-highlight {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .risk-highlight h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .risk-highlight p, .risk-highlight li {
+            color: #856404;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--glenorchy-navy);
+            color: #cccccc;
+            padding: 40px 0 20px 0;
+            border-top: 3px solid var(--glenorchy-gold);
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-column h4 {
+            color: var(--glenorchy-gold);
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--glenorchy-gold);
+        }
+
+        .footer-address p,
+        .footer-registration p,
+        .footer-contact p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #cccccc;
+        }
+
+        .footer-registration {
+            margin: 1rem 0;
+        }
+
+        .footer-contact a {
+            color: var(--glenorchy-gold);
+            font-weight: 500;
+        }
+
+        .footer-contact a:hover {
+            color: #ffffff;
+        }
+
+        .footer-disclaimer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #555555;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555555;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand .site-logo {
+            color: #cccccc;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-nav a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            color: var(--glenorchy-gold);
+        }
+
+        .footer-regulatory {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .regulatory-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--glenorchy-gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .regulatory-link:hover {
+            opacity: 0.8;
+        }
+
+        .footer-disclaimer {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #404040;
+            font-size: 0.85rem;
+            color: #999999;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1rem;
+                margin: 0 1rem;
+            }
+
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: start;
+            }
+
+            .footer-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .footer-columns {
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: left;
+                gap: 2rem;
+                max-width: 900px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="site-branding">
+            <a href="/" class="site-logo">Glenorchy Capital</a>
+        </div>
+        <nav class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/strategy">Strategy</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+            
+            <a href="/consultation" class="cta-button cta-primary">Schedule Consultation</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="legal-content">
+            <div class="legal-header">
+                <h1>Investment Disclaimer</h1>
+                <div class="last-updated">Last updated: September 3, 2025</div>
+            </div>
+
+            <div class="warning-box">
+                <h2>⚠️ CRITICAL INVESTMENT RISK DISCLOSURE</h2>
+                <p><strong>READ CAREFULLY BEFORE PROCEEDING</strong></p>
+                <p>All investments carry substantial risk of loss, including total loss of principal</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>1. General Investment Risks</h2>
+                <div class="risk-highlight">
+                    <h3>ALL INVESTMENTS CARRY RISK OF LOSS</h3>
+                    <p>Before making any investment decision, you must understand that you could lose some or all of your invested capital.</p>
+                </div>
+                
+                <p>Investment risks include, but are not limited to:</p>
+                <ul>
+                    <li><strong>Market Risk:</strong> Securities prices fluctuate based on market conditions</li>
+                    <li><strong>Credit Risk:</strong> Issuers may default on their obligations</li>
+                    <li><strong>Liquidity Risk:</strong> Investments may be difficult to sell at fair value</li>
+                    <li><strong>Currency Risk:</strong> Foreign currency fluctuations affect international investments</li>
+                    <li><strong>Interest Rate Risk:</strong> Changes in interest rates affect bond and stock values</li>
+                    <li><strong>Political Risk:</strong> Government actions may negatively impact investments</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>2. Past Performance Disclaimer</h2>
+                <div class="risk-highlight">
+                    <h3>PAST PERFORMANCE DOES NOT GUARANTEE FUTURE RESULTS</h3>
+                    <p>Historical performance information is provided for illustration purposes only and should not be considered predictive of future performance.</p>
+                </div>
+                
+                <p>Performance presentations may:</p>
+                <ul>
+                    <li>Not reflect the deduction of all fees and expenses</li>
+                    <li>Be based on limited time periods that may not be representative</li>
+                    <li>Include both favorable and unfavorable market conditions</li>
+                    <li>Not account for taxes, which may significantly affect returns</li>
+                    <li>Be subject to revision based on ongoing audits</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>3. Accredited Investor Limitations</h2>
+                <p>Our investment advisory services are available only to investors who qualify as "accredited investors" under federal securities laws. This means you must meet specific income or net worth thresholds and have sufficient investment experience to evaluate the risks of our strategies.</p>
+                
+                <h3>Minimum Requirements</h3>
+                <ul>
+                    <li>$200,000 minimum investment amount</li>
+                    <li>Accredited investor status verification required</li>
+                    <li>Suitable investment experience and knowledge</li>
+                    <li>Ability to bear economic loss of entire investment</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>4. Investment Strategy Risks</h2>
+                <p>Our contrarian deep value strategy involves specific risks:</p>
+                
+                <h3>Concentration Risk</h3>
+                <p>Our focused approach may result in concentrated positions that increase volatility and risk compared to more diversified portfolios.</p>
+                
+                <h3>Value Investment Risk</h3>
+                <p>Value investing involves buying securities that appear underpriced by some measures. There is no guarantee that these securities will appreciate or that the market will recognize their value.</p>
+                
+                <h3>International Investment Risk</h3>
+                <p>Our global mandate exposes portfolios to additional risks including:</p>
+                <ul>
+                    <li>Currency exchange rate fluctuations</li>
+                    <li>Political and economic instability</li>
+                    <li>Different regulatory and tax environments</li>
+                    <li>Limited liquidity in foreign markets</li>
+                    <li>Information availability and reliability differences</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>5. Fees and Expenses</h2>
+                <p>Investment advisory fees and other expenses will reduce returns. Our fee structure includes:</p>
+                <ul>
+                    <li>Management fees as disclosed in our Form ADV</li>
+                    <li>Potential performance-based fees</li>
+                    <li>Trading costs and brokerage commissions</li>
+                    <li>Custodial fees and administrative expenses</li>
+                </ul>
+                <p>The cumulative effect of fees and expenses can significantly reduce investment returns over time.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>6. Regulatory Disclosures</h2>
+                
+                <h3>SEC Registration</h3>
+                <p>Glenorchy Capital is registered with the Securities and Exchange Commission (SEC) as an investment adviser. Registration does not imply a certain level of skill or training or endorsement by the SEC.</p>
+                
+                <h3>Form ADV</h3>
+                <p>Our Form ADV Part 2A brochure contains important information about our advisory business, including our services, fees, investment strategies, and potential conflicts of interest. You will receive this document before entering into an advisory agreement.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>7. Forward-Looking Statements</h2>
+                <p>This website may contain forward-looking statements about our investment outlook, strategy expectations, and market projections. These statements:</p>
+                <ul>
+                    <li>Represent opinions as of the date made</li>
+                    <li>Are subject to significant uncertainty and change</li>
+                    <li>May not materialize as expected</li>
+                    <li>Should not be relied upon as predictions of future events</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>8. No Investment Advice</h2>
+                <p>Information provided on this website is for informational purposes only and should not be construed as:</p>
+                <ul>
+                    <li>Investment advice or recommendations</li>
+                    <li>An offer to sell securities</li>
+                    <li>A solicitation to purchase investments</li>
+                    <li>Tax, legal, or accounting advice</li>
+                </ul>
+                <p>Any investment decision should be made only after consultation with qualified professional advisors and thorough review of applicable offering documents.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>9. Tax Considerations</h2>
+                <div class="risk-highlight">
+                    <h3>Consult Your Tax Advisor</h3>
+                    <p>Investment strategies may have significant tax implications that vary based on individual circumstances.</p>
+                </div>
+                
+                <p>Tax considerations include:</p>
+                <ul>
+                    <li>Capital gains and losses treatment</li>
+                    <li>Income tax on distributions</li>
+                    <li>Alternative Minimum Tax implications</li>
+                    <li>State and local tax considerations</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>10. Due Diligence Requirements</h2>
+                <p>Before making any investment decision, you are responsible for:</p>
+                <ul>
+                    <li>Conducting thorough due diligence</li>
+                    <li>Reading all offering and disclosure documents</li>
+                    <li>Understanding your financial situation and goals</li>
+                    <li>Evaluating the suitability of our investment strategy</li>
+                    <li>Consulting with independent financial, tax, and legal advisors</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h2>FINAL WARNING</h2>
+                <p><strong>DO NOT INVEST UNLESS YOU:</strong></p>
+                <ul>
+                    <li>✓ Meet accredited investor requirements</li>
+                    <li>✓ Can afford to lose your entire investment</li>
+                    <li>✓ Understand all risks described herein</li>
+                    <li>✓ Have consulted with professional advisors</li>
+                    <li>✓ Have read our Form ADV and all disclosures</li>
+                    <li>✓ Are prepared for significant volatility</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>Questions About These Disclosures</h3>
+                <p>If you have questions about these risk disclosures or need additional information before making an investment decision, please contact us:</p>
+                <p>
+                    <strong>Glenorchy Capital Ltd.</strong><br>
+                    Email: admin@glenorchycapital.net<br>
+                    Address: 257 Desmond's Road, Boorolite, Victoria 3723, Australia<br>
+                    Registration: BVI Company no. 197 5524
+                </p>
+                <p>We strongly encourage you to ask questions and seek clarification on any matters you do not understand.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Glenorchy Capital</h4>
+                    <div class="footer-address">
+                        <p>257 Desmond's Road<br>
+                        Boorolite, Victoria 3723<br>
+                        Australia</p>
+                    </div>
+                    <div class="footer-registration">
+                        <p><small>BVI Company no. 197 5524<br>
+                        BVI Approved Investment Manager IBR/AIM/18/0235<br>
+                        United States CRD #: 305636 / SEC #: 801-117456</small></p>
+                    </div>
+                    <div class="footer-contact">
+                        <p><a href="mailto:admin@glenorchycapital.net">admin@glenorchycapital.net</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/strategy">Strategy</a></li>
+                        <li><a href="/fees">Fees</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="https://glenorchycapital.net/wp-content/uploads/2025/03/Glenorchy-Capital-Form-ADV-2A_2B-2025.pdf" target="_blank">Brochure</a></li>
+                        <li><a href="https://reports.adviserinfo.sec.gov/crs/crs_305636.pdf" target="_blank">CRS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/terms">Terms</a></li>
+                        <li><a href="/legal/privacy">Privacy</a></li>
+                        <li><a href="/legal/disclaimer">Disclaimer</a></li>
+                        <li><a href="/legal/performance-disclaimer">Performance Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Glenorchy Capital Ltd. is registered in the British Virgin Islands and has an Approved Investment Manager license issued by the BVI Financial Services Commission. Glenorchy is registered with the United States Securities and Exchange Commission as an investment adviser. Such registration does not imply that the firm or any of its employees have qualifications, skills, or training in the business of advising people on their financial affairs.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glenorchy Capital Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Ontraport Form Integration Placeholder -->
+<!-- ONTRAPORT_FORM_INTEGRATION_PLACEHOLDER -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.main-navigation')) {
+                navMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

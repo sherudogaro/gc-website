@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees & Structure - Glenorchy Capital</title>
+    <meta name="description" content="Transparent fee structure: 2% management + 20% performance. $200K minimum for accredited investors. No hidden costs.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Ontraport Tracking Script Placeholder -->
+    <!-- ONTRAPORT_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <!-- Google Analytics 4 Placeholder -->
+    <!-- GA4_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --glenorchy-gold: #B89676;
+            --glenorchy-navy: #272727;
+            --glenorchy-dark-blue: #1a3a52;
+            --off-white: #FAFAFA;
+            --warm-grey: #8A8A8A;
+            --steel-blue: #5B7C99;
+            --deep-green: #2D5A3D;
+            --charcoal: #3D3D3D;
+            --font-primary: 'Merriweather', serif;
+            --font-secondary: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        /* Reset and Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-primary);
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        h4 { 
+            font-size: 1.25rem;
+            color: var(--glenorchy-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--off-white);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.current {
+            color: var(--glenorchy-gold);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-primary {
+            background-color: var(--glenorchy-gold);
+            color: var(--off-white);
+            border-color: var(--glenorchy-gold);
+        }
+
+        .cta-primary:hover {
+            background-color: var(--glenorchy-dark-blue);
+            border-color: var(--glenorchy-dark-blue);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f6f3 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .fees-hero .hero-title {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            color: var(--glenorchy-navy);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666666;
+            margin-bottom: 48px;
+            font-weight: 400;
+        }
+
+        .fee-summary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .fee-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            min-width: 280px;
+        }
+
+        .fee-number {
+            font-family: var(--font-mono);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--glenorchy-gold);
+            margin-bottom: 8px;
+        }
+
+        .fee-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--glenorchy-navy);
+            margin-bottom: 12px;
+        }
+
+        .fee-description {
+            font-size: 0.95rem;
+            color: #666666;
+            margin: 0;
+        }
+
+        .fee-plus {
+            font-size: 2rem;
+            color: var(--glenorchy-gold);
+            font-weight: 700;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Investment Minimums */
+        .investment-minimums {
+            background: #f8f6f3;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        .requirement-card {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .requirement-icon {
+            color: var(--glenorchy-gold);
+            margin-bottom: 24px;
+        }
+
+        .requirement-amount {
+            font-family: var(--font-mono);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            margin: 16px 0;
+        }
+
+        .requirement-card h3 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .requirement-card p {
+            color: #555555;
+            margin: 0;
+        }
+
+        /* Fee Details */
+        .fee-explanation {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .fee-detail {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid var(--glenorchy-gold);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .fee-detail h3 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 24px;
+        }
+
+        .detail-content ul {
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        .detail-content li {
+            color: #555555;
+            margin-bottom: 12px;
+        }
+
+        .fee-note {
+            background: #f8f6f3;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+            font-size: 0.95rem;
+        }
+
+        /* Fee Comparison */
+        .fee-comparison {
+            background: #f8f6f3;
+        }
+
+        .comparison-table {
+            overflow-x: auto;
+            margin-bottom: 48px;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: var(--charcoal);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight-row {
+            background: #fdf9f5;
+        }
+
+        .highlight-row td {
+            font-weight: 600;
+            color: var(--glenorchy-navy);
+        }
+
+        .alignment-high {
+            color: var(--glenorchy-gold);
+            font-weight: 700;
+        }
+
+        .comparison-notes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .note-item {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .note-item h4 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 16px;
+        }
+
+        .note-item p {
+            color: #555555;
+            margin: 0;
+        }
+
+        /* No Hidden Fees */
+        .no-hidden-fees {
+            background: linear-gradient(135deg, var(--glenorchy-dark-blue) 0%, var(--glenorchy-navy) 100%);
+            color: white;
+        }
+
+        .transparency-content {
+            text-align: center;
+        }
+
+        .no-hidden-fees h2 {
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .no-hidden-fees h3 {
+            color: white;
+            margin-bottom: 32px;
+        }
+
+        .transparency-badge {
+            display: inline-block;
+            background: var(--glenorchy-gold);
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin-bottom: 48px;
+        }
+
+        .transparency-badge span {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--glenorchy-navy);
+        }
+
+        .included-services {
+            margin-bottom: 48px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #e0e0e0;
+        }
+
+        .checkmark {
+            color: var(--glenorchy-gold);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .not-included {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .not-included ul {
+            color: #e0e0e0;
+            margin: 20px 0;
+        }
+
+        .disclaimer-note {
+            font-size: 0.9rem;
+            color: #cccccc;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        /* Alignment Section */
+        .alignment-section {
+            background: white;
+        }
+
+        .alignment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+
+        .alignment-card {
+            text-align: center;
+        }
+
+        .alignment-icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        .alignment-card h3 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 16px;
+        }
+
+        .alignment-card p {
+            color: #555555;
+            margin: 0;
+        }
+
+        .skin-in-game-highlight {
+            background: #f8f6f3;
+            padding: 48px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skin-in-game-highlight blockquote {
+            font-size: 1.3rem;
+            color: var(--glenorchy-navy);
+            font-style: italic;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .skin-in-game-highlight cite {
+            color: var(--glenorchy-gold);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        /* FAQ Section */
+        .fees-faq {
+            background: #f8f6f3;
+        }
+
+        .fees-faq h2 {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .faq-item h4 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 16px;
+        }
+
+        .faq-item p {
+            color: #555555;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-content > p {
+            font-size: 1.1rem;
+            color: #555555;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: var(--glenorchy-gold);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--glenorchy-dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--glenorchy-navy);
+            border: 2px solid var(--glenorchy-navy);
+        }
+
+        .btn-secondary:hover {
+            background: var(--charcoal);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .qualification-note {
+            font-size: 0.9rem;
+            color: #666666;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--charcoal);
+            color: #cccccc;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-column h4 {
+            color: var(--glenorchy-gold);
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-column a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .footer-column a:hover {
+            color: var(--glenorchy-gold);
+        }
+        .footer-address p,
+        .footer-registration p,
+        .footer-contact p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #cccccc;
+        }
+        .footer-registration {
+            margin: 1rem 0;
+        }
+        .footer-disclaimer {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #404040;
+            font-size: 0.85rem;
+            color: #999999;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer-bottom {
+            text-align: center;
+            color: #999999;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fee-explanation {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-notes {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .alignment-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .fees-hero .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .fee-summary {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .fee-card {
+                min-width: auto;
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .fee-plus {
+                display: none;
+            }
+
+            .fee-number {
+                font-size: 2.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 48px 0;
+            }
+
+            .hero-section {
+                padding: 48px 0;
+            }
+
+            .fees-hero .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .requirement-card {
+                padding: 24px;
+            }
+
+            .fee-detail {
+                padding: 24px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .footer-columns {
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: left;
+                gap: 2rem;
+                max-width: 900px;
+            }
+        }
+        @media (min-width: 1025px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--charcoal);
+            position: relative;
+        }
+        .hamburger::before,
+        .hamburger::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: var(--charcoal);
+            left: 0;
+        }
+        .hamburger::before {
+            top: -8px;
+        }
+        .hamburger::after {
+            top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--off-white);
+                flex-direction: column;
+                padding: 1rem;
+                border-top: 1px solid #e5e5e5;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                font-size: 1.125rem;
+                padding: 0.75rem 0;
+                text-decoration: none;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="site-branding">
+            <a href="/" class="site-logo">Glenorchy Capital</a>
+        </div>
+        <nav class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/strategy">Strategy</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+            
+            <a href="/consultation" class="cta-button cta-primary">Schedule Consultation</a>
+        </nav>
+    </div>
+</header>
+
+<main class="site-main fees-page">
+    
+    <!-- Hero Section -->
+    <section class="hero-section fees-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transparent Fee Structure
+                </h1>
+                <p class="hero-subtitle">
+                    Simple, aligned pricing with no hidden costs
+                </p>
+                
+                <div class="fee-summary">
+                    <div class="fee-card primary-fee">
+                        <div class="fee-number">2%</div>
+                        <div class="fee-label">Annual Management Fee</div>
+                        <p class="fee-description">Covers research, operations, and portfolio management</p>
+                    </div>
+                    
+                    <div class="fee-plus">+</div>
+                    
+                    <div class="fee-card performance-fee">
+                        <div class="fee-number">20%</div>
+                        <div class="fee-label">Performance Fee</div>
+                        <p class="fee-description">Only on profits above high-water mark</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Minimums Section -->
+    <section class="investment-minimums">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investment Requirements</h2>
+                <p class="section-subtitle">Designed for serious, long-term investors</p>
+            </div>
+
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Minimum Investment</h3>
+                    <div class="requirement-amount">$200,000</div>
+                    <p>Initial minimum for new clients ensures meaningful portfolio allocation and cost-effective management.</p>
+                </div>
+
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/>
+                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Accredited Status</h3>
+                    <div class="requirement-amount">Required</div>
+                    <p>SEC regulations require accredited investor status for participation in our strategies.</p>
+                </div>
+
+                <div class="requirement-card">
+                    <div class="requirement-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Time Horizon</h3>
+                    <div class="requirement-amount">3+ Years</div>
+                    <p>Our contrarian approach requires patience. Best suited for investors with multi-year investment horizons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Details Section -->
+    <section class="fee-details">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Our Fees Work</h2>
+                <p class="section-subtitle">Complete transparency in every aspect</p>
+            </div>
+
+            <div class="fee-explanation">
+                <div class="fee-detail">
+                    <h3>Management Fee: 2% Annually</h3>
+                    <div class="detail-content">
+                        <p>The management fee covers all operational aspects of your investment:</p>
+                        <ul>
+                            <li>Continuous research and market analysis</li>
+                            <li>Portfolio construction and rebalancing</li>
+                            <li>Risk management and monitoring</li>
+                            <li>Regular reporting and client communications</li>
+                            <li>Compliance and regulatory requirements</li>
+                        </ul>
+                        <div class="fee-note">
+                            <strong>Billing:</strong> Charged quarterly in advance (0.5% per quarter)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fee-detail">
+                    <h3>Performance Fee: 20% of Profits</h3>
+                    <div class="detail-content">
+                        <p>We only earn performance fees when you make money:</p>
+                        <ul>
+                            <li>Calculated only on profits above your high-water mark</li>
+                            <li>No double-charging during recovery periods</li>
+                            <li>Crystallized annually on December 31st</li>
+                            <li>You keep 80% of all investment gains</li>
+                            <li>Aligns our success directly with yours</li>
+                        </ul>
+                        <div class="fee-note">
+                            <strong>High-Water Mark:</strong> Ensures you never pay performance fees twice on the same gains
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Comparison Section -->
+    <section class="fee-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industry Comparison</h2>
+                <p class="section-subtitle">How our fees compare to alternatives</p>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Investment Option</th>
+                            <th>Management Fee</th>
+                            <th>Performance Fee</th>
+                            <th>Typical Minimums</th>
+                            <th>Alignment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row">
+                            <td><strong>Glenorchy Capital</strong></td>
+                            <td><strong>2%</strong></td>
+                            <td><strong>20%</strong></td>
+                            <td><strong>$200K</strong></td>
+                            <td><span class="alignment-high">Heavily Invested</span></td>
+                        </tr>
+                        <tr>
+                            <td>Typical Hedge Fund</td>
+                            <td>2%</td>
+                            <td>20%</td>
+                            <td>$1M-$5M</td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>Mutual Funds</td>
+                            <td>0.5-2%</td>
+                            <td>None</td>
+                            <td>$1K-$10K</td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Private Wealth Managers</td>
+                            <td>1-1.5%</td>
+                            <td>Sometimes 10-15%</td>
+                            <td>$500K-$1M</td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>Robo-Advisors</td>
+                            <td>0.25-0.5%</td>
+                            <td>None</td>
+                            <td>$0-$500</td>
+                            <td>None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="comparison-notes">
+                <div class="note-item">
+                    <h4>Why Our Structure Makes Sense</h4>
+                    <p>Our 2% + 20% structure is standard for active management with a proven track record. Unlike mutual funds, we eat our own cooking with substantial personal capital invested alongside clients.</p>
+                </div>
+                <div class="note-item">
+                    <h4>Lower Minimums Than Hedge Funds</h4>
+                    <p>Most hedge funds require $1M+ minimums. Our $200K minimum makes institutional-quality management accessible to successful professionals and business owners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- No Hidden Fees Section -->
+    <section class="no-hidden-fees">
+        <div class="container">
+            <div class="transparency-content">
+                <h2>Complete Fee Transparency</h2>
+                <div class="transparency-badge">
+                    <span>No Hidden Costs</span>
+                </div>
+                
+                <div class="included-services">
+                    <h3>What's Included (No Extra Charges)</h3>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <span class="checkmark">✓</span>
+                            <span>Portfolio rebalancing</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="checkmark">✓</span>
+                            <span>Quarterly performance reports</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="checkmark">✓</span>
+                            <span>Tax documentation</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="checkmark">✓</span>
+                            <span>Annual strategy reviews</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="checkmark">✓</span>
+                            <span>Market commentary updates</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="checkmark">✓</span>
+                            <span>Direct access to principals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="not-included">
+                    <h3>Third-Party Costs (Separate)</h3>
+                    <p>The only additional costs are standard third-party expenses:</p>
+                    <ul>
+                        <li>Brokerage trading commissions (typically $0-10 per trade)</li>
+                        <li>Custodian fees (if applicable, varies by custodian)</li>
+                        <li>Wire transfer fees (if requested)</li>
+                    </ul>
+                    <p class="disclaimer-note">These are pass-through costs charged by third parties, not Glenorchy Capital fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alignment Section -->
+    <section class="alignment-section">
+        <div class="container">
+            <div class="alignment-content">
+                <h2>True Alignment of Interests</h2>
+                
+                <div class="alignment-grid">
+                    <div class="alignment-card">
+                        <div class="alignment-icon">💰</div>
+                        <h3>We Invest Alongside You</h3>
+                        <p>Chris and Brad invest their substantial personal capital in the same strategies offered to clients. We literally cannot succeed unless you do.</p>
+                    </div>
+                    
+                    <div class="alignment-card">
+                        <div class="alignment-icon">📈</div>
+                        <h3>Performance-Based Compensation</h3>
+                        <p>The majority of our compensation comes from performance fees. We're incentivized to generate returns, not just gather assets.</p>
+                    </div>
+                    
+                    <div class="alignment-card">
+                        <div class="alignment-icon">🎯</div>
+                        <h3>Long-Term Focus</h3>
+                        <p>Our contrarian approach and fee structure reward patient, long-term thinking over short-term speculation.</p>
+                    </div>
+                </div>
+
+                <div class="skin-in-game-highlight">
+                    <blockquote>
+                        "We invest our own substantial personal capital in the same strategies as our clients. We eat our own cooking. Your losses are our losses, your gains are our gains."
+                    </blockquote>
+                    <cite>— Chris MacIntosh & Brad McFadden</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="fees-faq">
+        <div class="container">
+            <h2>Common Fee Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Can I negotiate the fees?</h4>
+                    <p>Our fee structure is standardized for all clients to ensure fairness. Larger accounts ($1M+) may qualify for slightly reduced management fees.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>When are fees deducted?</h4>
+                    <p>Management fees are billed quarterly in advance. Performance fees are calculated and charged annually on December 31st.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What if I withdraw mid-year?</h4>
+                    <p>Management fees are prorated. Performance fees are calculated on gains at the time of withdrawal.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Are fees tax-deductible?</h4>
+                    <p>Investment management fees may be deductible depending on your situation. Consult your tax advisor for specific guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section fees-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Discuss Your Investment?</h2>
+                <p>Schedule a consultation to explore how our fee structure and investment approach align with your financial objectives.</p>
+                
+                <div class="cta-buttons">
+                    <a href="/contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+                    <a href="/strategy/" class="btn btn-secondary btn-large">Learn Our Strategy</a>
+                </div>
+                
+                <p class="qualification-note">
+                    Minimum investment: $200,000 | Accredited investors only
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Glenorchy Capital</h4>
+                    <div class="footer-address">
+                        <p>257 Desmond's Road<br>
+                        Boorolite, Victoria 3723<br>
+                        Australia</p>
+                    </div>
+                    <div class="footer-registration">
+                        <p><small>BVI Company no. 197 5524<br>
+                        BVI Approved Investment Manager IBR/AIM/18/0235<br>
+                        United States CRD #: 305636 / SEC #: 801-117456</small></p>
+                    </div>
+                    <div class="footer-contact">
+                        <p><a href="mailto:admin@glenorchycapital.net">admin@glenorchycapital.net</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/strategy">Strategy</a></li>
+                        <li><a href="/fees">Fees</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="https://glenorchycapital.net/wp-content/uploads/2025/03/Glenorchy-Capital-Form-ADV-2A_2B-2025.pdf" target="_blank">Brochure</a></li>
+                        <li><a href="https://reports.adviserinfo.sec.gov/crs/crs_305636.pdf" target="_blank">CRS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/terms">Terms</a></li>
+                        <li><a href="/legal/privacy">Privacy</a></li>
+                        <li><a href="/legal/disclaimer">Disclaimer</a></li>
+                        <li><a href="/legal/performance-disclaimer">Performance Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Glenorchy Capital Ltd. is registered in the British Virgin Islands and has an Approved Investment Manager license issued by the BVI Financial Services Commission. Glenorchy is registered with the United States Securities and Exchange Commission as an investment adviser. Such registration does not imply that the firm or any of its employees have qualifications, skills, or training in the business of advising people on their financial affairs.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glenorchy Capital Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript for mobile menu toggle -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+        
+        if (menuToggle) {
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        }
+    });
+</script>
+</body>
+</html>

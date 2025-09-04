@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy - Glenorchy Capital</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Ontraport Tracking Script Placeholder -->
+    <!-- ONTRAPORT_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <!-- Google Analytics 4 Placeholder -->
+    <!-- GA4_TRACKING_SCRIPT_PLACEHOLDER -->
+    
+    <style>
+        :root {
+            --glenorchy-gold: #B89676;
+            --glenorchy-navy: #272727;
+            --glenorchy-dark-blue: #1a3a52;
+            --off-white: #FAFAFA;
+            --warm-grey: #8A8A8A;
+            --steel-blue: #5B7C99;
+            --deep-green: #2D5A3D;
+            --charcoal: #3D3D3D;
+            --font-primary: 'Merriweather', serif;
+            --font-secondary: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--off-white);
+            border-bottom: 1px solid #e5e5e5;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-logo {
+            font-family: var(--font-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--glenorchy-navy);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .main-navigation {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            font-family: var(--font-secondary);
+            font-weight: 500;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--glenorchy-gold);
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+        }
+
+        .cta-primary {
+            background-color: var(--glenorchy-gold);
+            color: var(--off-white);
+            border-color: var(--glenorchy-gold);
+        }
+
+        .cta-primary:hover {
+            background-color: var(--glenorchy-dark-blue);
+            border-color: var(--glenorchy-dark-blue);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--glenorchy-navy);
+            position: relative;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background: var(--glenorchy-navy);
+            left: 0;
+        }
+
+        .hamburger::before {
+            top: -8px;
+        }
+
+        .hamburger::after {
+            top: 8px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--charcoal);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--off-white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu a {
+                font-size: 1.125rem;
+                padding: 0.75rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .main-navigation {
+                gap: 1rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0 4rem 0;
+        }
+
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .legal-header h1 {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: var(--warm-grey);
+            font-size: 0.9rem;
+        }
+
+        .legal-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-section h2 {
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        .legal-section h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .legal-section p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            color: var(--glenorchy-navy);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: var(--glenorchy-navy);
+            color: #cccccc;
+            padding: 40px 0 20px 0;
+            border-top: 3px solid var(--glenorchy-gold);
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-column h4 {
+            color: var(--glenorchy-gold);
+            font-family: var(--font-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--glenorchy-gold);
+        }
+
+        .footer-address p,
+        .footer-registration p,
+        .footer-contact p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #cccccc;
+        }
+
+        .footer-registration {
+            margin: 1rem 0;
+        }
+
+        .footer-contact a {
+            color: var(--glenorchy-gold);
+            font-weight: 500;
+        }
+
+        .footer-contact a:hover {
+            color: #ffffff;
+        }
+
+        .footer-disclaimer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #555555;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555555;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand .site-logo {
+            color: #cccccc;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-nav a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav a:hover {
+            color: var(--glenorchy-gold);
+        }
+
+        .footer-regulatory {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .regulatory-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--glenorchy-gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .regulatory-link:hover {
+            opacity: 0.8;
+        }
+
+        .footer-disclaimer {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #404040;
+            font-size: 0.85rem;
+            color: #999999;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 2rem 1rem;
+                margin: 0 1rem;
+            }
+
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: start;
+            }
+
+            .footer-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .footer-columns {
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: left;
+                gap: 2rem;
+                max-width: 900px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="site-branding">
+            <a href="/" class="site-logo">Glenorchy Capital</a>
+        </div>
+        <nav class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="/strategy">Strategy</a></li>
+                <li><a href="/performance">Performance</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+            
+            <a href="/consultation" class="cta-button cta-primary">Schedule Consultation</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="legal-content">
+            <div class="legal-header">
+                <h1>Privacy Policy</h1>
+                <div class="last-updated">Last updated: September 3, 2025</div>
+            </div>
+
+            <div class="legal-section">
+                <h2>Information We Collect</h2>
+                
+                <h3>Personal Information</h3>
+                <p>We collect personal information that you provide directly to us, including:</p>
+                <ul>
+                    <li>Name, email address, and phone number</li>
+                    <li>Investment experience and financial information</li>
+                    <li>Accredited investor status and documentation</li>
+                    <li>Information provided during consultation forms and calls</li>
+                    <li>Correspondence and communications with our team</li>
+                </ul>
+
+                <h3>Automatically Collected Information</h3>
+                <p>We automatically collect certain information when you visit our website:</p>
+                <ul>
+                    <li>IP address and general location information</li>
+                    <li>Browser type, device type, and operating system</li>
+                    <li>Pages visited, time spent on pages, and navigation patterns</li>
+                    <li>Referral sources and search terms used to find our website</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide investment advisory services and portfolio management</li>
+                    <li>Assess your eligibility and suitability for our investment strategies</li>
+                    <li>Communicate with you about our services, market updates, and account information</li>
+                    <li>Comply with legal and regulatory requirements</li>
+                    <li>Improve our website, services, and client experience</li>
+                    <li>Conduct research and analysis for investment purposes</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Information Sharing and Disclosure</h2>
+                <p>We may share your information in the following circumstances:</p>
+                
+                <h3>Service Providers</h3>
+                <p>We work with trusted third-party service providers who assist us in operating our business, including:</p>
+                <ul>
+                    <li>Custodians and prime brokers for account administration</li>
+                    <li>Technology providers for CRM, website hosting, and analytics</li>
+                    <li>Legal, accounting, and compliance professionals</li>
+                </ul>
+
+                <h3>Legal Requirements</h3>
+                <p>We may disclose your information when required by law, regulation, or legal process, including:</p>
+                <ul>
+                    <li>SEC, FINRA, or other regulatory examinations and investigations</li>
+                    <li>Court orders, subpoenas, or other legal proceedings</li>
+                    <li>Anti-money laundering and suspicious activity reporting</li>
+                </ul>
+
+                <h3>Business Transfers</h3>
+                <p>If we undergo a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect your personal information, including:</p>
+                <ul>
+                    <li>Encryption of sensitive data in transit and at rest</li>
+                    <li>Access controls and multi-factor authentication</li>
+                    <li>Regular security assessments and employee training</li>
+                    <li>Compliance with industry-standard security frameworks</li>
+                </ul>
+                <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee its absolute security.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar technologies to enhance your experience on our website:</p>
+                
+                <h3>Types of Cookies</h3>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for website functionality</li>
+                    <li><strong>Analytics Cookies:</strong> Help us understand website usage patterns</li>
+                    <li><strong>Marketing Cookies:</strong> Enable personalized content and advertising</li>
+                </ul>
+                
+                <p>You can control cookie settings through your browser preferences. Disabling certain cookies may affect website functionality.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Your Privacy Rights</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                <ul>
+                    <li>Access to the personal information we hold about you</li>
+                    <li>Correction of inaccurate or incomplete information</li>
+                    <li>Deletion of your personal information in certain circumstances</li>
+                    <li>Restriction or objection to certain processing activities</li>
+                    <li>Data portability in machine-readable format</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the information provided below.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2>Data Retention</h2>
+                <p>We retain your personal information for as long as necessary to provide our services and comply with legal obligations. Specific retention periods include:</p>
+                <ul>
+                    <li>Client records: 7 years after account closure (as required by investment advisor regulations)</li>
+                    <li>Marketing communications: Until you unsubscribe or opt-out</li>
+                    <li>Website analytics: 24-38 months depending on the data type</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>International Data Transfers</h2>
+                <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place when transferring personal information internationally, including:</p>
+                <ul>
+                    <li>Standard contractual clauses approved by relevant authorities</li>
+                    <li>Adequacy decisions by regulatory bodies</li>
+                    <li>Other legally compliant transfer mechanisms</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will notify you of material changes by:</p>
+                <ul>
+                    <li>Posting the updated policy on our website with a new "Last updated" date</li>
+                    <li>Sending email notifications to registered users</li>
+                    <li>Providing notice through our client portal or other communication channels</li>
+                </ul>
+                <p>Your continued use of our services after changes become effective constitutes acceptance of the updated Privacy Policy.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:</p>
+                <p>
+                    <strong>Glenorchy Capital Ltd.</strong><br>
+                    Email: admin@glenorchycapital.net<br>
+                    Address: 257 Desmond's Road, Boorolite, Victoria 3723, Australia<br>
+                    Registration: BVI Company no. 197 5524
+                </p>
+                <p>We will respond to privacy-related inquiries within 30 days of receipt.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Glenorchy Capital</h4>
+                    <div class="footer-address">
+                        <p>257 Desmond's Road<br>
+                        Boorolite, Victoria 3723<br>
+                        Australia</p>
+                    </div>
+                    <div class="footer-registration">
+                        <p><small>BVI Company no. 197 5524<br>
+                        BVI Approved Investment Manager IBR/AIM/18/0235<br>
+                        United States CRD #: 305636 / SEC #: 801-117456</small></p>
+                    </div>
+                    <div class="footer-contact">
+                        <p><a href="mailto:admin@glenorchycapital.net">admin@glenorchycapital.net</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="/strategy">Strategy</a></li>
+                        <li><a href="/fees">Fees</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="https://glenorchycapital.net/wp-content/uploads/2025/03/Glenorchy-Capital-Form-ADV-2A_2B-2025.pdf" target="_blank">Brochure</a></li>
+                        <li><a href="https://reports.adviserinfo.sec.gov/crs/crs_305636.pdf" target="_blank">CRS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/terms">Terms</a></li>
+                        <li><a href="/legal/privacy">Privacy</a></li>
+                        <li><a href="/legal/disclaimer">Disclaimer</a></li>
+                        <li><a href="/legal/performance-disclaimer">Performance Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <p>Glenorchy Capital Ltd. is registered in the British Virgin Islands and has an Approved Investment Manager license issued by the BVI Financial Services Commission. Glenorchy is registered with the United States Securities and Exchange Commission as an investment adviser. Such registration does not imply that the firm or any of its employees have qualifications, skills, or training in the business of advising people on their financial affairs.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Glenorchy Capital Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Ontraport Form Integration Placeholder -->
+<!-- ONTRAPORT_FORM_INTEGRATION_PLACEHOLDER -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.main-navigation')) {
+                navMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>
