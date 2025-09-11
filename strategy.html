@@ -225,7 +225,7 @@
 
         .strategy-summary {
             max-width: 800px;
-            margin: 0 auto 48px;
+            margin: 0 auto 24px;
         }
 
         .hero-description {
@@ -238,7 +238,7 @@
             display: flex;
             justify-content: center;
             gap: 48px;
-            margin-top: 48px;
+            margin-top: 24px;
         }
 
         .stat-item {
@@ -289,7 +289,7 @@
 
         .approach-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr;
             gap: 48px;
         }
 
@@ -344,7 +344,7 @@
         /* Investment Process */
         .process-steps {
             display: grid;
-            gap: 32px;
+            gap: 48px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -707,6 +707,7 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 16px;
+                align-items: center;
             }
 
             .comparison-grid {
@@ -770,6 +771,11 @@
         }
 
         @media (min-width: 769px) {
+            .approach-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 48px;
+            }
+            
             .footer-columns {
                 grid-template-columns: 1fr 1fr 1fr;
                 text-align: left;
@@ -987,6 +993,21 @@
                         <li>Quality metrics within cheap sectors</li>
                     </ul>
                 </div>
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Small Positions</h3>
+                    <p>Positions generally don't exceed 2% of our portfolio, but target 300%+ returns. This allows superior performance without concentration risk.</p>
+                    <ul>
+                        <li>Asymmetric risk-reward profile</li>
+                        <li>Diversification through position sizing</li>
+                        <li>Target outsized returns per position</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -1041,16 +1062,16 @@
             <div class="anti-mainstream-content">
                 <div class="anti-mainstream-text">
                     <h2>Why We're Different</h2>
-                    <h3>Anti-Mainstream Investment Philosophy</h3>
+                    <h3>Our Anti-Mainstream Investment Philosophy</h3>
                     
                     <div class="comparison-grid">
                         <div class="comparison-item">
-                            <h4>While Others Diversify Everything</h4>
-                            <p>We concentrate on asymmetric opportunities in unloved sectors where recovery is "when, not if"..</p>
+                            <h4>While Others Blindly Follow Mag7</h4>
+                            <p>We concentrate on asymmetric opportunities in unloved sectors where recovery is "when, not if".</p>
                         </div>
                         
                         <div class="comparison-item">
-                            <h4>While Others Follow ESG Trends</h4>
+                            <h4>While Others Pander to ESG</h4>
                             <p>We invest where capital is treated best, not where it's politically correct or fashionable.</p>
                         </div>
                         
@@ -1071,7 +1092,7 @@
                         
                         <div class="comparison-item">
                             <h4>While Others Follow the Crowd</h4>
-                            <p>We maintain conviction in our contrarian thesis even when markets disagree in the short term.</p>
+                            <p>We maintain conviction in our contrarian thesis - even when markets disagree in the short term.</p>
                         </div>
                     </div>
                 </div>
@@ -1091,7 +1112,7 @@
                 <div class="risk-principles">
                     <div class="risk-principle">
                         <h3>Position Sizing Discipline</h3>
-                        <p>Position are typically 1% - 2% of our portfolios. All our positions target 300% or more in retunrs, meaning .</p>
+                        <p>Position are typically 1% - 2% of our portfolios. All our positions target 300% or more in returns - bending the laws of probability in our favour</p>
                     </div>
                     
                     <div class="risk-principle">
