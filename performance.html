@@ -542,13 +542,33 @@
                 width: 100%;
             }
 
-            .performance-table {
-                font-size: 0.875rem;
+            /* Mobile table improvements */
+            .performance-table-container {
+                padding: 1rem;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
-            .performance-table th,
+            .performance-table {
+                font-size: 0.75rem;
+                min-width: 100%;
+                white-space: nowrap;
+            }
+
+            .performance-table th {
+                padding: 0.5rem 0.25rem;
+                font-size: 0.7rem;
+                line-height: 1.2;
+            }
+
             .performance-table td {
-                padding: 0.75rem 0.5rem;
+                padding: 0.5rem 0.25rem;
+                font-size: 0.75rem;
+            }
+
+            /* Ensure table headers don't wrap */
+            .performance-table th {
+                white-space: nowrap;
             }
         }
 
@@ -720,7 +740,6 @@
                 display: block;
             }
 
-
             .cta-button {
                 padding: 10px 20px;
                 font-size: 0.85rem;
@@ -846,14 +865,14 @@
                 <!-- Cumulative Returns Table -->
                 <div class="performance-table-container" id="asymmetric-cumulative-returns">
                     <h3 class="table-title">Annualized Returns (Net of Fees)</h3>
-                    <p class="table-subtitle">Asymmetric Strategy vs. Global Stock Index (ACWI) as of August 31, 2025</p>
+                    <p class="table-subtitle">Asymmetric Strategy vs. Benchmark Global Stock Index (ACWI) as of August 31, 2025</p>
                     
                     <table class="performance-table">
                         <thead>
                             <tr>
                                 <th>Period</th>
                                 <th>Return</th>
-                                <th>Benchmark (ACWI)</th>
+                                <th>ACWI</th>
                                 <th>Excess</th>
                             </tr>
                         </thead>
@@ -901,14 +920,14 @@
                 <!-- Annual Returns Table -->
                 <div class="performance-table-container" id="asymmetric-annual-returns">
                     <h3 class="table-title">Annual Returns (Net of Fees)</h3>
-                    <p class="table-subtitle">Asymmetric Strategy vs. Global Stock Index (ACWI), as of 31 August 2025</p>
+                    <p class="table-subtitle">Asymmetric Strategy vs. Benchmark Global Stock Index (ACWI), as of 31 August 2025</p>
                     
                     <table class="performance-table">
                         <thead>
                             <tr>
                                 <th>Year</th>
                                 <th>Return</th>
-                                <th>Benchmark (ACWI)</th>
+                                <th>ACWI</th>
                                 <th>Excess</th>
                             </tr>
                         </thead>
@@ -962,7 +981,7 @@
                 <!-- Growth Chart -->
                 <div class="growth-chart-container" id="asymmetric-growth-chart">
                     <h3 class="chart-title">Cumulative Growth Chart</h3>
-                    <p class="chart-subtitle">Asymmetric Strategy vs. Global Stock Index (ACWI) - $500,000 Investment, as of August 31, 2025</p>
+                    <p class="chart-subtitle">Asymmetric Strategy vs. Benchmark Global Stock Index (ACWI) - $500,000 Investment, as of August 31, 2025</p>
                     
                     <div style="max-width: 800px; margin: 0 auto;">
                         <div style="position: relative; width: 100%; height: 0px; padding: 69.57% 0px 0px; overflow: hidden; will-change: transform;">
@@ -987,14 +1006,14 @@
                 <!-- Cumulative Returns Table -->
                 <div class="performance-table-container" id="dividend-cumulative-returns">
                     <h3 class="table-title">Annualized Returns (Net of Fees)</h3>
-                    <p class="table-subtitle">Dividend Strategy vs. Dividend ETF (DVY) as of August 31, 2025</p>
+                    <p class="table-subtitle">Dividend Strategy vs. Benchmark Dividend ETF (DVY) as of August 31, 2025</p>
                     
                     <table class="performance-table">
                         <thead>
                             <tr>
                                 <th>Period</th>
                                 <th>Return</th>
-                                <th>Benchmark (DVY)</th>
+                                <th>DVY</th>
                                 <th>Excess</th>
                             </tr>
                         </thead>
@@ -1036,14 +1055,14 @@
                 <!-- Annual Returns Table -->
                 <div class="performance-table-container" id="dividend-annual-returns">
                     <h3 class="table-title">Annual Returns (Net of Fees)</h3>
-                    <p class="table-subtitle">Dividend Strategy vs. Dividend ETF (DVY), as of 31 August 2025</p>
+                    <p class="table-subtitle">Dividend Strategy vs. BenchmarkDividend ETF (DVY), as of 31 August 2025</p>
                     
                     <table class="performance-table">
                         <thead>
                             <tr>
                                 <th>Year</th>
                                 <th>Return</th>
-                                <th>Benchmark (DVY)</th>
+                                <th>DVY</th>
                                 <th>Excess</th>
                             </tr>
                         </thead>
@@ -1085,7 +1104,7 @@
                 <!-- Growth Chart -->
                 <div class="growth-chart-container" id="dividend-growth-chart">
                     <h3 class="chart-title">Cumulative Growth Chart</h3>
-                    <p class="chart-subtitle">Dividend Strategy vs. Dividend ETF (DVY) - $500,000 Investment, as of August 31, 2025</p>
+                    <p class="chart-subtitle">Dividend Strategy vs. Benchmark Dividend ETF (DVY) - $500,000 Investment, as of August 31, 2025</p>
                     
                     <div style="max-width: 800px; margin: 0 auto;">
                         <div style="position: relative; width: 100%; height: 0px; padding: 69.57% 0px 0px; overflow: hidden; will-change: transform;">
@@ -1107,7 +1126,7 @@
                 <!-- Dividend Cumulative Returns Chart (%) -->
                 <div class="growth-chart-container" id="dividend-returns-chart">
                     <h3 class="chart-title">Cumulative Returns Chart</h3>
-                    <p class="chart-subtitle">Dividend Strategy vs. Dividend ETF (DVY) - Indexed to 100, as of August 31, 2025</p>
+                    <p class="chart-subtitle">Dividend Strategy vs. BenchmarkDividend ETF (DVY) - Indexed to 100, as of August 31, 2025</p>
                     
                     <div style="max-width: 800px; margin: 0 auto;">
                         <div style="position: relative; width: 100%; height: 0px; padding: 69.57% 0px 0px; overflow: hidden; will-change: transform;">
