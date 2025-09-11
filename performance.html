@@ -771,8 +771,15 @@
                 Complete performance history since inception. No cherry-picking, no marketing tricks.
             </p>
             
-            <!-- Key Metrics -->
-            <div class="key-metrics">
+            <!-- Portfolio Tabs -->
+            <div class="portfolio-tabs">
+                <button class="tab-button active" onclick="showPortfolio('asymmetric')">Asymmetric Strategy</button>
+                <button class="tab-button" onclick="showPortfolio('dividend')">Dividend Strategy</button>
+                <button class="tab-button" onclick="showPortfolio('combined')">Combined View</button>
+            </div>
+            
+            <!-- Key Metrics - Asymmetric Strategy -->
+            <div class="key-metrics" id="asymmetric-metrics">
                 <div class="metric-card">
                     <div class="metric-card-title">Total Net return</div>
                     <span class="metric-value">+154%</span>
@@ -793,22 +800,46 @@
                 </div>
                 <div class="metric-card">
                     <div class="metric-card-title">outperformance</div>
-                    <span class="metric-value">27%</span>
+                    <span class="metric-value">55%</span>
                     <div class="metric-label">vs Global Stocks (ACWI)</div>
                     <div class="metric-period">Since Inception 2019</div>
                 </div>
             </div>
+            
+            <!-- Key Metrics - Dividend Strategy -->
+            <div class="key-metrics" id="dividend-metrics" style="display: none;">
+                <div class="metric-card">
+                    <div class="metric-card-title">Total Net return</div>
+                    <span class="metric-value">+52%</span>
+                    <div class="metric-label">Dividend Strategy</div>
+                    <div class="metric-period">Since Inception 2022</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-card-title">Annualized Net Return</div>
+                    <span class="metric-value">12.2%</span>
+                    <div class="metric-label">Dividend Strategy</div>
+                    <div class="metric-period">Since Inception 2022</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-card-title">Current Dividend Yield</div>
+                    <span class="metric-value">7.8%</span>
+                    <div class="metric-label">Portfolio Yield TTM</div>
+                    <div class="metric-period">vs DVY 3.2%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-card-title">outperformance</div>
+                    <span class="metric-value">30.4%</span>
+                    <div class="metric-label">vs Dividend ETF (DVY)</div>
+                    <div class="metric-period">Since Inception 2022</div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
-    <!-- Portfolio Tabs -->
+    <!-- Performance Section -->
     <section class="performance-section">
         <div class="container">
-            <div class="portfolio-tabs">
-                <button class="tab-button active" onclick="showPortfolio('asymmetric')">Asymmetric Strategy</button>
-                <button class="tab-button" onclick="showPortfolio('dividend')">Dividend Strategy</button>
-                <button class="tab-button" onclick="showPortfolio('combined')">Combined View</button>
-            </div>
 
             <!-- Asymmetric Strategy Performance -->
             <div id="asymmetric-content" class="portfolio-content">
@@ -1163,21 +1194,25 @@
                 <div>
                     <h3 style="color: var(--glenorchy-gold); margin-bottom: 1rem; font-size: 1.25rem;">Performance Methodology</h3>
                     <p class="disclaimer-text">
-                        Returns are time-weighted, net of all management and performance fees, calculated monthly using industry-standard methodology. Portfolio performance shows a representative managed account following Glenorchy Capital's Asymmetric investment strategy since inception on September 18, 2019.
+                        Returns are time-weighted, net of all management and performance fees, calculated monthly using industry-standard methodology. Portfolio performance shows representative managed accounts following Glenorchy Capital's investment strategies since inception on September 18, 2019.
                     </p>
                 </div>
                 
                 <div>
                     <h3 style="color: var(--glenorchy-gold); margin-bottom: 1rem; font-size: 1.25rem;">Benchmark & Comparison</h3>
                     <p class="disclaimer-text">
-                        ACWI (iShares MSCI ACWI ETF) represents global equity market performance across developed and emerging markets. Benchmark returns are gross of fees. Excess returns calculated as arithmetic difference between portfolio and benchmark returns.
+                        <strong>Asymmetric Strategy:</strong> ACWI (iShares MSCI ACWI ETF) represents global equity market performance across developed and emerging markets<br><br>
+                        
+                        <strong>Dividend Strategy:</strong> DVY (iShares Select Dividend ETF) represents high-dividend equity performance in the U.S. market<br><br>
+                        
+                        Benchmark returns are also net of fees. Excess returns calculated as arithmetic difference between portfolio and benchmark returns.
                     </p>
                 </div>
                 
                 <div>
                     <h3 style="color: var(--glenorchy-gold); margin-bottom: 1rem; font-size: 1.25rem;">Important Risk Disclosures</h3>
                     <p class="disclaimer-text">
-                        Past performance does not guarantee future results. Investment returns and principal value will fluctuate. The representative account may not reflect the experience of all clients due to differences in timing, market conditions, and individual circumstances. The Asymmetric strategy involves concentrated positions in undervalued sectors globally, which may result in higher volatility than diversified strategies. International investing involves currency risk, political risk, and different regulatory environments.
+                        Past performance does not guarantee future results. Investment returns and principal value will fluctuate. Representative accounts may not reflect the experience of all clients due to differences in timing, market conditions, and individual circumstances. The Asymmetric strategy involves concentrated positions in undervalued sectors globally, which may result in higher volatility than diversified strategies. The Dividend strategy focuses on income-generating equities which may have different risk characteristics. International investing involves currency risk, political risk, and different regulatory environments.
                     </p>
                 </div>
                 
@@ -1274,9 +1309,14 @@
 <!-- Basic JavaScript for tabs and disclosures -->
 <script>
 function showPortfolio(portfolio) {
-    // Hide all content
+    // Hide all portfolio content
     document.querySelectorAll('.portfolio-content').forEach(content => {
         content.style.display = 'none';
+    });
+    
+    // Hide all key metrics
+    document.querySelectorAll('.key-metrics').forEach(metrics => {
+        metrics.style.display = 'none';
     });
     
     // Remove active class from all buttons
@@ -1284,8 +1324,14 @@ function showPortfolio(portfolio) {
         button.classList.remove('active');
     });
     
-    // Show selected content
+    // Show selected portfolio content
     document.getElementById(portfolio + '-content').style.display = 'block';
+    
+    // Show selected key metrics (if it exists)
+    const metricsElement = document.getElementById(portfolio + '-metrics');
+    if (metricsElement) {
+        metricsElement.style.display = 'grid';
+    }
     
     // Add active class to clicked button
     event.target.classList.add('active');
