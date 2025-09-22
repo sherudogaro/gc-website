@@ -442,6 +442,64 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
+        /* Video Disclaimer Styles */
+        .video-disclaimer {
+            max-width: 800px;
+            margin: 1rem auto 2rem;
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .disclaimer-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: #856404;
+            font-weight: 600;
+            font-size: 0.9rem;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            width: 100%;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .disclaimer-toggle:hover {
+            color: #654202;
+        }
+
+        .disclaimer-toggle .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .disclaimer-toggle.active .arrow {
+            transform: rotate(90deg);
+        }
+
+        .disclaimer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #856404;
+            font-size: 0.825rem;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 1rem;
+        }
+
+        .disclaimer-content.active {
+            max-height: 600px;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            border-top: 1px solid #ffecb5;
+        }
     </style>
 </head>
 <body>
@@ -472,6 +530,19 @@
             <div class="hero-video" style="max-width: 800px; margin: 2rem auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);">
                 <div style="padding:56.25% 0 0 0;position:relative;">
                     <iframe src="https://player.vimeo.com/video/928182276?h=47856833fe&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Rebel Fund"></iframe>
+                </div>
+            </div>
+
+            <!-- Video Disclaimer -->
+            <div class="video-disclaimer">
+                <button class="disclaimer-toggle" onclick="toggleVideoDisclaimer()">
+                    <span class="arrow">▶</span>
+                    <span>Important Disclaimer & Disclosures</span>
+                </button>
+                <div class="disclaimer-content" id="videoDisclaimer">
+                    <p>The information contained herein is not intended to render investment advice. I am not licensed as an investment adviser, broker, or other type of financial professional in any jurisdiction. I do not know your individual financial situation and speak merely from my own personal experience, which is not suitable for everyone. All investments carry risk and performance is never guaranteed. Viewers should perform their own due diligence and consult an investment professional prior to acting on any information provided. My opinions and analyses are based on sources believed to be reliable, but no representation, expressed or implied, is made to their accuracy and completeness. Opinions are subject to change without notice.</p>
+
+                    <p>I am a member of the Glenorchy Rebel Fund's General Partner. As such, I receive compensation based on how the Fund performs, which represents a conflict of interest. Refer to the Fund's offering documents for full disclosure of the risks and conflicts associated with an investment in the Fund. The Fund is only suitable for Accredited Investors, that is, investors who meet certain income and/or investable asset thresholds. Investment in the Fund requires delivery of the offering documents, which are available to qualified persons upon request.</p>
                 </div>
             </div>
             
@@ -710,6 +781,16 @@
 
 <!-- JavaScript for Form Handling -->
 <script>
+// Toggle video disclaimer
+function toggleVideoDisclaimer() {
+    const button = event.currentTarget;
+    const content = document.getElementById('videoDisclaimer');
+
+    button.classList.toggle('active');
+    content.classList.toggle('active');
+}
+
+// Form handling
 document.getElementById('rebelFundForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
