@@ -538,83 +538,24 @@
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-container">
-                    <h2 class="form-title">Qualify & Book Your Call</h2>
+                    <h2 class="form-title">Register & Book Your Call</h2>
                     <p class="form-subtitle">
                         Tell us about yourself and we'll take you directly to our calendar to select your preferred consultation time.
                     </p>
                     
-                    <!-- Custom Consultation Form -->
+                    <!-- TESTING: Ontraport Form (Can revert to custom form if needed) -->
+                    <div style="background: white; padding: 1rem; border-radius: 8px; min-height: 547px;">
+                        <script type='text/javascript' async='true' src='https://app.ontraport.com/js/ontraport/opt_assets/drivers/opf.js' data-opf-uid='p2c193653f71' data-opf-params='borderColor=#000000&borderSize=0px&embed=true&formHeight=547&formWidth=100%&popPosition=mc&instance=n586838321'></script>
+                    </div>
+
+                    <!--
+                    BACKUP: Original Custom Form (commented out for testing)
+                    If Ontraport form looks bad, I can quickly restore this.
+
                     <form id="consultation-form" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="first_name">First Name <span class="required">*</span></label>
-                                <input type="text" id="first_name" name="first_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="last_name">Last Name <span class="required">*</span></label>
-                                <input type="text" id="last_name" name="last_name" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="country">Country of Residence <span class="required">*</span></label>
-                            <select id="country" name="country" required>
-                                <option value="">Select your country</option>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="GB">United Kingdom</option>
-                                <option value="AU">Australia</option>
-                                <option value="NZ">New Zealand</option>
-                                <option value="SG">Singapore</option>
-                                <option value="HK">Hong Kong</option>
-                                <option value="AE">UAE</option>
-                                <option value="CH">Switzerland</option>
-                                <option value="DE">Germany</option>
-                                <option value="FR">France</option>
-                                <option value="NL">Netherlands</option>
-                                <option value="SE">Sweden</option>
-                                <option value="NO">Norway</option>
-                                <option value="OTHER">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="accredited" id="accredited" required>
-                                <span>I'm a Qualified Client with min. US$200k to invest <span class="required">*</span></span>
-                            </label>
-                        </div>
-
-                        <!-- Hidden field for Ontraport referral ID -->
-                        <input type="hidden" id="orid" name="orid" value="">
-
-                        <button type="submit" class="submit-button">
-                            Next: Select Date & Time
-                        </button>
-
-                        <div class="form-disclaimer">
-                            <p>By submitting this form, you agree to our <a href="legal/privacy.html" target="_blank">Privacy Policy</a>. Your information will be processed securely and you'll be redirected to schedule your consultation.</p>
-                        </div>
-
-                        <div class="form-success" style="display: none;">
-                            <h3>Thank You!</h3>
-                            <p>Your information has been received. Redirecting you to select your consultation time...</p>
-                        </div>
-
-                        <div class="form-error" style="display: none;">
-                            <p>There was an error submitting your request. Please try again or email us directly at admin@glenorchycapital.net</p>
-                        </div>
+                        [Custom form fields here - preserved for easy restoration]
                     </form>
+                    -->
                 </div>
             </div>
         </div>

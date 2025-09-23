@@ -500,6 +500,102 @@
             margin-top: 0.5rem;
             border-top: 1px solid #ffecb5;
         }
+
+        /* Performance Table Styles */
+        .performance-section {
+            padding: 60px 0;
+            background: #f8f6f3;
+        }
+
+        .performance-table-container {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .performance-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .performance-table h3 {
+            color: var(--glenorchy-navy);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .performance-table th {
+            background: var(--glenorchy-navy);
+            color: white;
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 1px solid var(--glenorchy-navy);
+        }
+
+        .performance-table td {
+            padding: 0.625rem 0.5rem;
+            text-align: center;
+            border: 1px solid #e5e5e5;
+            font-size: 0.875rem;
+        }
+
+        .performance-table tbody tr:hover {
+            background: #f8f6f3;
+        }
+
+        .performance-table .year-cell {
+            font-weight: 600;
+            background: #f8f6f3;
+        }
+
+        .performance-table .positive {
+            color: #2D5A3D;
+            font-weight: 600;
+        }
+
+        .performance-table .negative {
+            color: #d32f2f;
+            font-weight: 600;
+        }
+
+        .performance-table .empty-cell {
+            color: #999;
+            font-size: 0.75rem;
+        }
+
+        .performance-notes {
+            background: #fff3cd;
+            border: 1px solid #ffecb5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            color: #856404;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .performance-notes strong {
+            color: #654202;
+        }
+
+        @media (max-width: 768px) {
+            .performance-table {
+                font-size: 0.7rem;
+            }
+
+            .performance-table th,
+            .performance-table td {
+                padding: 0.4rem 0.25rem;
+                font-size: 0.7rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -587,7 +683,7 @@
             <div class="strategy-grid">
                 <div class="strategy-card">
                     <h3>Deep Value</h3>
-                    <p>Search global financial markets for extremely out-of-favour sectors trading at generational discounts.</p>
+                    <p>Search global financial markets for extremely out-of-favour sectors trading at deep discounts.</p>
                 </div>
                 
                 <div class="strategy-card">
@@ -612,7 +708,80 @@
                 
                 <div class="strategy-card">
                     <h3>Asymmetry</h3>
-                    <p>Target 3:1 or better risk-return ratios from themes and sectors with exceptional upside potential.</p>
+                    <p>Target 3:1 or better risk-return ratios from themes and sectors with asymmetric upside potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2>Fund Performance</h2>
+                <p style="font-size: 1.125rem; color: var(--charcoal);">Monthly net returns since inception (March 2024)</p>
+            </div>
+
+            <div class="performance-table-container">
+                <h3>Glenorchy Macro Value Fund (US) LLC - Net Return Since Inception*</h3>
+                <table class="performance-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Jan</th>
+                            <th>Feb</th>
+                            <th>Mar</th>
+                            <th>Apr</th>
+                            <th>May</th>
+                            <th>Jun</th>
+                            <th>Jul</th>
+                            <th>Aug</th>
+                            <th>Sep</th>
+                            <th>Oct</th>
+                            <th>Nov</th>
+                            <th>Dec</th>
+                            <th>Full Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="year-cell">2025</td>
+                            <td class="positive">2.29%</td>
+                            <td class="negative">-6.24%</td>
+                            <td class="positive">1.67%</td>
+                            <td class="negative">-2.37%</td>
+                            <td class="positive">6.60%</td>
+                            <td class="positive">1.74%</td>
+                            <td class="positive">1.52%</td>
+                            <td class="positive">2.30%</td>
+                            <td class="empty-cell">-</td>
+                            <td class="empty-cell">-</td>
+                            <td class="empty-cell">-</td>
+                            <td class="empty-cell">-</td>
+                            <td class="positive">7.25%</td>
+                        </tr>
+                        <tr>
+                            <td class="year-cell">2024</td>
+                            <td class="empty-cell">-</td>
+                            <td class="empty-cell">-</td>
+                            <td class="empty-cell">-</td>
+                            <td class="positive">6.74%</td>
+                            <td class="positive">0.96%</td>
+                            <td class="positive">6.06%</td>
+                            <td class="negative">-4.33%</td>
+                            <td class="positive">0.84%</td>
+                            <td class="negative">-2.70%</td>
+                            <td class="positive">2.95%</td>
+                            <td class="negative">-0.96%</td>
+                            <td class="positive">3.96%</td>
+                            <td class="positive">11.24%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="performance-notes">
+                    <p><strong>Performance Notes:</strong></p>
+                    <p>* Net return data for Glenorchy Macro Value Fund (US) LLC (the "Fund") is prepared by its Manager and presented after the deduction of all applicable fees and expenses in place at the time, which were: a 2% management fee and 20% performance fee. Individual investor performance may vary due to factors such as investment timing and specific fee arrangements. As with any investment vehicle, past performance does not guarantee future results.</p>
                 </div>
             </div>
         </div>
@@ -654,74 +823,21 @@
     <section class="form-section">
         <div class="container">
             <div class="form-container">
-                <h2 class="form-title">Join the Rebel Fund</h2>
-                
-                <form class="consultation-form" id="rebelFundForm">
-                    <div class="form-group">
-                        <label for="firstName">First Name *</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="lastName">Last Name *</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="country">Country of Residence *</label>
-                        <select id="country" name="country" required>
-                            <option value="">Select Country</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="GB">United Kingdom</option>
-                            <option value="AU">Australia</option>
-                            <option value="DE">Germany</option>
-                            <option value="FR">France</option>
-                            <option value="CH">Switzerland</option>
-                            <option value="SG">Singapore</option>
-                            <option value="HK">Hong Kong</option>
-                            <!-- Add more countries as needed -->
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="investmentAmount">Approximate Investment Amount</label>
-                        <select id="investmentAmount" name="investmentAmount">
-                            <option value="">Select Amount</option>
-                            <option value="200k-500k">$200K - $500K</option>
-                            <option value="500k-1m">$500K - $1M</option>
-                            <option value="1m-5m">$1M - $5M</option>
-                            <option value="5m-10m">$5M - $10M</option>
-                            <option value="10m+">$10M+</option>
-                        </select>
-                    </div>
-                    
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="qualifiedClient" name="qualifiedClient" required>
-                        <label for="qualifiedClient">I confirm that I am a Qualified Client with investable assets exceeding $1.1 million (required for fund participation) *</label>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">Request Fund Information</button>
-                </form>
-            </div>
-        </div>
-    </section>
+                <h2 class="form-title">Register & Book Your Call</h2>
+                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 2rem; color: var(--off-white); opacity: 0.9;">Tell us about yourself and we'll take you directly to our calendar to select your preferred consultation time.</p>
 
-    <!-- Disclaimer -->
-    <section class="disclaimer-section">
-        <div class="container">
-            <div class="disclaimer-text">
-                <p><strong>Important Notice:</strong> The Rebel Fund has no current track record. Past performance of other Glenorchy Capital strategies does not guarantee future results. Investment involves substantial risk of loss. Minimum investment $200,000. Qualified Clients only. This is not an offer to sell securities.</p>
+                <!-- Ontraport Form for Rebel Fund -->
+                <div style="background: white; padding: 1rem; border-radius: 8px; min-height: 547px;">
+                    <script type='text/javascript' async='true' src='https://app.ontraport.com/js/ontraport/opt_assets/drivers/opf.js' data-opf-uid='p2c193653f72' data-opf-params='borderColor=#000000&borderSize=0px&embed=true&formHeight=547&formWidth=100%&popPosition=mc&instance=n586838321'></script>
+                </div>
+
+                <!--
+                BACKUP: Original Custom Rebel Fund Form (commented out for testing)
+
+                <form class="consultation-form" id="rebelFundForm">
+                    [Custom form fields here - preserved for easy restoration]
+                </form>
+                -->
             </div>
         </div>
     </section>

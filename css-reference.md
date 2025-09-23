@@ -1,351 +1,223 @@
 # Glenorchy Capital - CSS Reference Guide
 
-This document provides a comprehensive reference for all CSS classes available in the Glenorchy Capital website design system.
+This document provides the definitive reference for the Glenorchy Capital website design system, based on the actual implementation.
 
 ## CSS Variables (Custom Properties)
 
-### Colors
-- `--primary-color: #1a365d` - Main brand color
-- `--primary-light: #2d5a87` - Light variant
-- `--primary-dark: #0f2a44` - Dark variant
-- `--secondary-color: #2c5282` - Secondary brand color
-- `--accent-color: #3182ce` - Accent/link color
-- `--success-color: #38a169` - Success states
-- `--warning-color: #d69e2e` - Warning states
-- `--error-color: #e53e3e` - Error states
+### Brand Colors
+- `--glenorchy-gold: #B89676` - **Primary brand color** (brown/gold)
+- `--glenorchy-navy: #272727` - **Dark text and accent color**
+- `--glenorchy-dark-blue: #1a3a52` - **Button hover states and dark accents**
+- `--off-white: #FAFAFA` - **Main background color**
+- `--warm-grey: #8A8A8A` - **Secondary text and muted content**
+- `--steel-blue: #5B7C99` - **Supporting accent color**
+- `--deep-green: #2D5A3D` - **Positive numbers and success states**
+- `--charcoal: #3D3D3D` - **Main body text color**
 
-### Text Colors
-- `--text-primary: #1a202c` - Main text color
-- `--text-secondary: #4a5568` - Secondary text
-- `--text-muted: #718096` - Muted text
-- `--text-inverse: #ffffff` - Inverse (white) text
+### Typography System
+- `--font-primary: 'Merriweather', serif` - **Headlines and main titles**
+- `--font-secondary: 'Inter', sans-serif` - **Body text and UI elements**
+- `--font-mono: 'JetBrains Mono', monospace` - **Performance data and tables**
 
-### Background Colors
-- `--bg-primary: #ffffff` - Main background
-- `--bg-secondary: #f7fafc` - Secondary background
-- `--bg-dark: #1a202c` - Dark background
-- `--bg-light-gray: #edf2f7` - Light gray background
+### Google Fonts Import
+```css
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+```
 
-### Typography Scale
-- `--text-xs: 0.75rem` (12px)
-- `--text-sm: 0.875rem` (14px)
-- `--text-base: 1rem` (16px)
-- `--text-lg: 1.125rem` (18px)
-- `--text-xl: 1.25rem` (20px)
-- `--text-2xl: 1.5rem` (24px)
-- `--text-3xl: 1.875rem` (30px)
-- `--text-4xl: 2.25rem` (36px)
-- `--text-5xl: 3rem` (48px)
+## Typography Scale
 
-### Spacing Scale
-- `--space-1: 0.25rem` (4px)
-- `--space-2: 0.5rem` (8px)
-- `--space-3: 0.75rem` (12px)
-- `--space-4: 1rem` (16px)
-- `--space-5: 1.25rem` (20px)
-- `--space-6: 1.5rem` (24px)
-- `--space-8: 2rem` (32px)
-- `--space-10: 2.5rem` (40px)
-- `--space-12: 3rem` (48px)
-- `--space-16: 4rem` (64px)
-- `--space-20: 5rem` (80px)
+### Heading Hierarchy
+- `h1`: 2.5rem (40px) - 3rem (48px) desktop | Merriweather, weight 700
+- `h2`: 2rem (32px) | Merriweather, weight 400
+- `h3`: 1.5rem (24px) | Inter, weight 600
 
-## Layout Classes
+### Body Text
+- Base font size: 1rem (16px)
+- Line height: 1.6
+- Font family: Inter
+- Color: var(--charcoal)
 
-### Container System
-- `.container` - Main content container with max-width and auto margins
-  - Mobile: padding 16px
-  - Tablet+: padding 24px
-  - Max-width: 1280px
+### Performance Data
+- Font family: JetBrains Mono
+- Used for all financial metrics and performance tables
 
-### Header & Navigation
-- `.main-header` - Site header with sticky positioning and shadow
-- `.main-nav` - Navigation wrapper with padding
-- `.nav-container` - Navigation inner container with flex layout
-- `.logo` - Logo/brand area
-- `.nav-menu` - Navigation menu (hidden on mobile)
-- `.nav-link` - Navigation links with hover states
-- `.nav-link.active` - Active navigation link styling
-- `.nav-cta` - Call-to-action button in navigation
-- `.mobile-menu-toggle` - Hamburger menu button (mobile only)
+## Layout System
 
-### Main Content Areas
-- `.main-content` - Main content wrapper
-- `.hero-section` - Homepage hero section with gradient background
-- `.page-hero` - Interior page hero (smaller than homepage)
-- `.value-proposition` - Value proposition section
-- `.strategy-overview` - Strategy section layout
-- `.performance-overview` - Performance section layout
-- `.team-leadership` - Team section layout
-- `.contact-section` - Contact form section with gray background
+### Container
+- `.container` - Max-width: 1200px, centered with auto margins
+- Mobile: padding 0 1rem
+- Desktop: padding 0 2rem
 
-### Footer
-- `.main-footer` - Site footer with dark background
-- `.footer-content` - Footer content grid
-- `.footer-section` - Individual footer column
-- `.footer-bottom` - Footer bottom bar with copyright
+### Grid Systems
+- Mobile-first responsive design
+- Single column on mobile
+- 2-column on tablet (769px+)
+- 3-column on desktop (1025px+)
 
 ## Component Classes
 
-### Hero Components
-- `.hero-content` - Hero section content wrapper
-- `.hero-title` - Main hero headline
-- `.hero-subtitle` - Hero description text
-- `.hero-cta` - Hero call-to-action button container
+### Header & Navigation
+- `.site-header` - Sticky header with border bottom
+- `.site-logo` - Merriweather font, glenorchy-navy color
+- `.nav-menu` - Flex navigation menu
+- `.nav-menu a` - Inter font, weight 500, hover: glenorchy-gold
 
-### Page Headers
-- `.page-header` - Interior page header content
-- `.section-header` - Section header with title and description
+### Buttons (CTA System)
+- `.cta-button` - Base button styles
+- `.cta-primary` - Background: glenorchy-gold, hover: glenorchy-dark-blue
+- `.cta-secondary` - Outline style with glenorchy-navy
 
-### Content Grids
-- `.value-grid` - Value proposition items grid
-- `.value-item` - Individual value proposition item
-- `.strategy-grid` - Strategy items grid
-- `.strategy-item` - Individual strategy item
-- `.methodology-grid` - Methodology items grid
-- `.methodology-item` - Individual methodology item
-- `.team-grid` - Team members grid
-- `.team-member` - Individual team member card
-
-### Team Components
-- `.member-photo` - Team member photo container
-- `.member-info` - Team member information
-- `.member-expertise` - Team member expertise list
-- `.team-philosophy` - Team philosophy section
-- `.philosophy-content` - Philosophy content wrapper
-- `.philosophy-points` - Philosophy points container
-- `.philosophy-point` - Individual philosophy point
-
-### Process Components
-- `.investment-process` - Process section wrapper
-- `.process-steps` - Process steps container
-- `.process-step` - Individual process step
-- `.step-number` - Process step number styling
+### Hero Section
+- `.hero-section` - Gradient background, 4rem padding
+- `.hero-content` - Grid layout for hero content
+- `.hero-tagline` - glenorchy-gold color accent
+- `.hero-credentials` - Flex layout for credentials
 
 ### Performance Components
-- `.performance-highlights` - Performance highlights grid
-- `.performance-item` - Individual performance item
-- `.performance-methodology` - Methodology section
-- `.performance-access` - Access requirements section
-- `.access-content` - Access content wrapper
-- `.access-requirements` - Requirements list
-- `.requirement-item` - Individual requirement
+- `.performance-snapshot` - White background with shadow
+- `.metric-value` - JetBrains Mono, large size, glenorchy-gold
+- `.metric-label` - glenorchy-navy, weight 600
+- `.metric-period` - warm-grey, smaller size
 
-### Philosophy Components
-- `.investment-philosophy` - Philosophy section
-- `.philosophy-performance` - Performance philosophy
-- `.philosophy-metrics` - Philosophy metrics container
-- `.metric-focus` - Individual metric focus item
+### Strategy Cards
+- `.strategy-card` - White background, rounded corners, hover effects
+- `.strategy-type` - glenorchy-gold, uppercase, small size
+- `.strategy-metrics` - Grid layout for metrics
+- `.strategy-metric-value` - glenorchy-gold color
 
-### CTA Sections
-- `.cta-section` - Call-to-action section with gradient background
-- `.cta-content` - CTA content wrapper
+### Philosophy Section
+- `.philosophy-section` - off-white background
+- `.philosophy-item` - Individual philosophy cards
+- `.philosophy-icon` - SVG icon styling
 
-## Form Classes
+### Performance Tables
+- `.performance-table` - JetBrains Mono font family
+- `.positive` - deep-green color for positive returns
+- `.negative` - #d32f2f color for negative returns
+- Headers: glenorchy-navy background, white text
 
-### Form Layout
-- `.contact-grid` - Contact page grid layout
-- `.contact-info` - Contact information section
-- `.contact-details` - Contact details container
-- `.contact-item` - Individual contact detail
-- `.consultation-form` - Main consultation form container
+### Forms
+- `.form-section` - glenorchy-navy background
+- `.consultation-form` - Form styling with proper spacing
+- `.submit-button` - glenorchy-gold background, hover: glenorchy-dark-blue
 
-### Form Elements
-- `.contact-form` - Form styling
-- `.fallback-form` - Fallback form (when Ontraport not loaded)
-- `.form-group` - Form field group wrapper
-- `.checkbox-group` - Checkbox group with special layout
-- `.field-error` - Error message styling (added via JavaScript)
+### Footer
+- `.site-footer` - glenorchy-navy background, glenorchy-gold top border
+- `.footer-column h4` - glenorchy-gold headings
+- `.footer-contact a` - glenorchy-gold links
 
-### Form States
-- `.error` - Error state for form fields (added via JavaScript)
-- `.success-message` - Success message styling (added via JavaScript)
+## Color Usage Guidelines
 
-## Button Classes
+### Primary Brand Color (Glenorchy Gold #B89676)
+- Main CTA buttons
+- Links and interactive elements
+- Section headings and accents
+- Performance metrics
+- Footer headings
 
-### Primary Buttons
-- `.btn` - Base button styling
-- `.btn-primary` - Primary button (blue background)
-- `.btn-secondary` - Secondary button (outline style)
+### Navy (#272727)
+- Main headlines and titles
+- Form backgrounds
+- Footer background
+- High contrast text
 
-### Button States
-- All buttons include hover effects with transform and shadow
-- Focus states for accessibility
-- Disabled states supported
+### Charcoal (#3D3D3D)
+- Body text and paragraphs
+- Default text color
 
-## Legal Page Classes
+### Warm Grey (#8A8A8A)
+- Secondary text
+- Metadata and captions
+- Muted content
 
-- `.legal-page` - Legal page wrapper with padding
-- `.legal-content` - Legal content container (narrower width)
-- `.legal-section` - Individual legal section
-- `.warning-box` - Warning/disclaimer box with yellow background
-- `.last-updated` - Last updated timestamp styling
-- `.contact-info` - Contact information in legal pages
-- `.legal-footer` - Legal page footer section
-
-## Disclaimer Components
-
-- `.disclaimer-content` - Disclaimer content wrapper
-- `.performance-disclaimer` - Performance disclaimer box
-- `.investment-disclaimer` - Investment disclaimer section
-
-## Utility Classes
-
-### Text Alignment
-- `.text-center` - Center align text
-- `.text-left` - Left align text
-- `.text-right` - Right align text
-
-### Spacing Utilities
-- `.mb-0` - Margin bottom: 0
-- `.mb-4` - Margin bottom: 16px
-- `.mb-8` - Margin bottom: 32px
-- `.mt-0` - Margin top: 0
-- `.mt-4` - Margin top: 16px
-- `.mt-8` - Margin top: 32px
+### Deep Green (#2D5A3D)
+- Positive performance numbers
+- Success states
 
 ## Responsive Breakpoints
 
-### Mobile First Approach
-- **Base styles**: Mobile (< 768px)
-- **Tablet**: 768px and up
+### Mobile First Design
+- **Base**: < 768px (mobile)
+- **Tablet**: 768px+
   - Navigation becomes horizontal
-  - Grids become 2-column
-  - Hero title larger
-- **Desktop**: 1024px and up
-  - Grids become 3-column
-  - Maximum hero size
-  - Full desktop layout
+  - 2-column grids
+  - Larger hero text
+- **Desktop**: 1025px+
+  - 3-column grids
+  - Maximum content width
+  - Enhanced spacing
 
-### Grid Responsive Behavior
-- **Mobile**: All grids are single column
-- **Tablet**: 2-column grids for most content
-- **Desktop**: 3-column grids where appropriate
+### Grid Behavior
+- Mobile: Single column stack
+- Tablet: 2-column layout
+- Desktop: 3-column where appropriate
 
-## Hover Effects and Interactions
+## Interactive States
 
-### Standard Hover Effects
-- Cards lift up slightly (`translateY(-4px)`)
-- Buttons transform with shadow
-- Links change color and may underline
-- Navigation items get background color
+### Hover Effects
+- Cards: `translateY(-2px)` with shadow
+- Buttons: Color transition + shadow
+- Links: Color change to glenorchy-gold
 
-### Transition System
-- `--transition: all 0.3s ease` - Standard transitions
-- `--transition-fast: all 0.15s ease` - Fast transitions
+### Transitions
+- Standard: `all 0.3s ease`
+- Fast interactions: `0.15s ease`
 
 ## Accessibility Features
 
 ### Focus States
-- All interactive elements have visible focus outlines
-- Focus outline: 3px solid accent color with 2px offset
+- Visible focus outlines on all interactive elements
+- Keyboard navigation support
 
-### Reduced Motion
-- Respects `prefers-reduced-motion: reduce`
-- Animations disabled for users with motion sensitivity
+### Color Contrast
+- All text meets WCAG AA standards
+- High contrast mode support
 
-### High Contrast Mode
-- Support for `prefers-contrast: high`
-- Colors adjusted for better contrast
+### Typography
+- Scalable font sizes
+- Readable line heights (1.6)
+- Clear font weight hierarchy
 
-## Browser Support
+## Performance Table Styling
 
-### Modern Browser Features Used
-- CSS Grid Layout
-- CSS Custom Properties (Variables)
-- CSS Transforms
-- Modern CSS Selectors
+### Table Structure
+- `.performance-table` - JetBrains Mono font
+- `.performance-table th` - glenorchy-navy background
+- `.performance-table td` - Center aligned data
+- `.year-cell` - Bold styling for year column
+- `.positive` - Green color for gains
+- `.negative` - Red color for losses
+- `.empty-cell` - Grey styling for N/A data
 
-### Fallbacks Provided
-- Flexbox fallbacks for older browsers
-- Print styles included
-- Progressive enhancement approach
-
-## Print Styles
-
-- Navigation and interactive elements hidden
-- Text optimized for print
-- Container constraints removed
-- Font sizes adjusted for print media
-
-## Usage Examples
-
-### Basic Page Structure
-```html
-<header class="main-header">
-  <nav class="main-nav">
-    <div class="nav-container">
-      <!-- Navigation content -->
-    </div>
-  </nav>
-</header>
-
-<main class="main-content">
-  <section class="hero-section"> <!-- or .page-hero for interior pages -->
-    <div class="container">
-      <!-- Content -->
-    </div>
-  </section>
-</main>
-
-<footer class="main-footer">
-  <div class="container">
-    <!-- Footer content -->
-  </div>
-</footer>
-```
-
-### Content Section
-```html
-<section class="value-proposition">
-  <div class="container">
-    <div class="section-header">
-      <h2>Section Title</h2>
-      <p>Section description</p>
-    </div>
-    <div class="value-grid">
-      <div class="value-item">
-        <h3>Item Title</h3>
-        <p>Item content</p>
-      </div>
-      <!-- More items -->
-    </div>
-  </div>
-</section>
-```
-
-### CTA Section
-```html
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2>CTA Headline</h2>
-      <p>CTA description</p>
-      <a href="#" class="btn btn-primary">Action Button</a>
-    </div>
-  </div>
-</section>
-```
+### Responsive Tables
+- Horizontal scroll on mobile
+- Smaller font sizes on mobile devices
+- Touch-friendly padding
 
 ## File Organization
 
-The CSS is organized in the following order:
-1. CSS Variables
+CSS is structured in this order:
+1. CSS Variables (colors, fonts, etc.)
 2. Reset & Base Styles
-3. Typography
-4. Layout Components
+3. Typography System
+4. Layout Components (container, grids)
 5. Header & Navigation
-6. Buttons
-7. Hero Section
-8. Page Components
-9. Forms
-10. Footer
-11. Legal Pages
-12. Utility Classes
-13. CTA Sections
-14. Responsive Design (Tablet)
-15. Responsive Design (Desktop)
-16. Print Styles
-17. Accessibility Improvements
+6. Button System
+7. Hero Sections
+8. Content Sections
+9. Performance Components
+10. Forms
+11. Footer
+12. Responsive Design
+13. Accessibility Features
 
-This organization makes it easy to find and modify specific components while maintaining consistency across the entire website.
+This structure ensures consistency and maintainability across the entire website.
+
+## Brand Implementation Notes
+
+- **Primary typeface**: Merriweather for headlines creates professional, trustworthy feel
+- **Secondary typeface**: Inter for body text ensures excellent readability
+- **Monospace**: JetBrains Mono for all financial data maintains precision and clarity
+- **Gold color**: Used strategically for calls-to-action and key metrics to drive conversion
+- **Navy**: Provides strong contrast and professional appearance
+- **Responsive design**: Mobile-first approach ensures optimal experience across devices
