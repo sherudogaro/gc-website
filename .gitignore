@@ -21,3 +21,19 @@ node_modules/
 # Build outputs (if any)
 dist/
 build/
+
+# Development and documentation files
+.claude/
+CLAUDE.md
+progress.md
+project-brief.md
+ontraport-integration.md
+css-reference.md
+deployment-ready-status.md
+css-extraction-report.txt
+server.py
+session-summary*.md
+DEPLOYMENT-CHECKLIST.md
+REBEL-FUND-CONTEXT.md
+preview-thankyou.html
+index.php
