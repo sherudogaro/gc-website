@@ -1,0 +1,16 @@
+{
+    "name": "Glenorchy Capital",
+    "short_name": "Glenorchy Capital",
+    "description": "SEC-registered contrarian investment management firm specializing in global deep value investing",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#B89676",
+    "background_color": "#FAFAFA",
+    "display": "browser",
+    "start_url": "/"
+}
