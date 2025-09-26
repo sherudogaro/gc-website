@@ -1,4 +1,0 @@
-# Minimal .htaccess for testing - expand after confirming it works
-
-# Basic security - prevent directory listing
-Options -Indexes
