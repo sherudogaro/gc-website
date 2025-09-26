@@ -906,59 +906,6 @@ function toggleVideoDisclaimer() {
     content.classList.toggle('active');
 }
 
-// Form handling
-document.getElementById('rebelFundForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = {
-        first_name: formData.get('firstName'),
-        last_name: formData.get('lastName'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        country: formData.get('country'),
-        investment_amount: formData.get('investmentAmount'),
-        qualified_client: formData.get('qualifiedClient') === 'on',
-        service_type: 'rebel_fund', // This identifies it as a Rebel Fund inquiry
-        timestamp: new Date().toISOString(),
-        source: 'Rebel Fund Website',
-        page_url: window.location.href
-    };
-    
-    const submitButton = this.querySelector('.submit-button');
-    const originalText = submitButton.textContent;
-    
-    try {
-        submitButton.textContent = 'Submitting...';
-        submitButton.disabled = true;
-        
-        // Use same webhook as consultation.html but with service_type identifier
-        const ZAPIER_WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE';
-        
-        const response = await fetch(ZAPIER_WEBHOOK_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
-        
-        if (response.ok) {
-            // Redirect to thank you page or show success message
-            alert('Thank you for your interest in the Rebel Fund. We will contact you within 24 hours to discuss next steps.');
-            this.reset();
-        } else {
-            throw new Error('Submission failed');
-        }
-        
-    } catch (error) {
-        alert('There was an error submitting your request. Please try again or contact us directly at admin@glenorchycapital.net');
-        console.error('Form submission error:', error);
-    } finally {
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-    }
-});
 </script>
 
 <!-- Vimeo Player Script -->

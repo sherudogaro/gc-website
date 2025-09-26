@@ -617,179 +617,20 @@
     </div>
 </footer>
 
-<!-- JavaScript for form submission and Calendly redirect -->
+<!-- Mobile menu toggle -->
 <script>
-    // ======================================
-    // CONFIGURATION - UPDATE THESE VALUES
-    // ======================================
-    
-    // ZAPIER WEBHOOK URL - This will receive form data and push to Ontraport
-    // Replace with your actual Zapier webhook URL once created
-    const WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE'; // e.g., 'https://hooks.zapier.com/hooks/catch/123456/abc123/'
-    
-    // CALENDLY BOOKING URL
-    const CALENDLY_URL = 'https://calendly.com/d/ckr-fbt-87k/introductory-call';
-    
-    // ======================================
-    // URL PARAMETER CAPTURE (FOR AFFILIATE TRACKING)
-    // ======================================
-    
-    function getUrlParams() {
-        const params = {};
-        const urlParams = new URLSearchParams(window.location.search);
-        
-        // Capture Ontraport referral ID (most important!)
-        if (urlParams.get('orid')) {
-            params.orid = urlParams.get('orid');
-            // Store in hidden field
-            document.getElementById('orid').value = urlParams.get('orid');
-        }
-        
-        // Capture UTM parameters if present
-        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(param => {
-            if (urlParams.get(param)) {
-                params[param] = urlParams.get(param);
-            }
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
         });
-        
-        // Capture other tracking parameters
-        ['ref', 'partner', 'affiliate', 'source'].forEach(param => {
-            if (urlParams.get(param)) {
-                params[param] = urlParams.get(param);
-            }
-        });
-        
-        return params;
     }
-    
-    // Store tracking parameters in session storage for persistence
-    function storeTrackingParams() {
-        const params = getUrlParams();
-        if (Object.keys(params).length > 0) {
-            sessionStorage.setItem('gc_tracking', JSON.stringify(params));
-        }
-    }
-    
-    // ======================================
-    // FORM SUBMISSION HANDLER
-    // ======================================
-    
-    document.getElementById('consultation-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitBtn = this.querySelector('.submit-button');
-        const successMsg = this.querySelector('.form-success');
-        const errorMsg = this.querySelector('.form-error');
-        
-        // Disable submit button
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Processing...';
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = {
-            // Contact information
-            first_name: formData.get('first_name'),
-            last_name: formData.get('last_name'),
-            email: formData.get('email'),
-            phone: formData.get('phone'),
-            country: formData.get('country'),
-            accredited: formData.get('accredited') ? true : false,
-            
-            // Tracking information
-            orid: formData.get('orid') || '',
-            
-            // Additional metadata
-            timestamp: new Date().toISOString(),
-            source: 'Glenorchy Capital Website',
-            page_url: window.location.href,
-            
-            // Add any stored tracking parameters
-            ...JSON.parse(sessionStorage.getItem('gc_tracking') || '{}')
-        };
-        
-        try {
-            // Submit to webhook (which will push to Ontraport)
-            const response = await fetch(WEBHOOK_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
-            
-            if (response.ok || WEBHOOK_URL === 'YOUR_ZAPIER_WEBHOOK_URL_HERE') {
-                // Show success message
-                successMsg.style.display = 'block';
-                errorMsg.style.display = 'none';
-                this.style.display = 'none';
-                
-                // Track conversion if Google Analytics is present
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'consultation_request', {
-                        'event_category': 'engagement',
-                        'event_label': 'consultation_form'
-                    });
-                }
-                
-                // Build Calendly URL with prefilled parameters
-                const calendlyParams = new URLSearchParams({
-                    name: `${data.first_name} ${data.last_name}`,
-                    email: data.email,
-                    a1: data.phone, // Phone as answer 1
-                    a2: data.country, // Country as answer 2
-                    hide_event_type_details: '1',
-                    hide_gdpr_banner: '1',
-                    primary_color: 'b89676'
-                });
-                
-                // Add tracking parameters to Calendly URL
-                if (data.orid) {
-                    calendlyParams.append('a3', `ORID: ${data.orid}`); // Pass ORID as answer 3
-                }
-                
-                const finalCalendlyUrl = `${CALENDLY_URL}?${calendlyParams.toString()}`;
-                
-                // Redirect to Calendly after 2 seconds
-                setTimeout(() => {
-                    window.location.href = finalCalendlyUrl;
-                }, 2000);
-                
-            } else {
-                throw new Error('Submission failed');
-            }
-            
-        } catch (error) {
-            console.error('Form submission error:', error);
-            
-            // Show error message
-            errorMsg.style.display = 'block';
-            successMsg.style.display = 'none';
-            
-            // Re-enable submit button
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Next: Select Date & Time';
-        }
-    });
-    
-    // ======================================
-    // MOBILE MENU TOGGLE
-    // ======================================
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        // Store tracking parameters on page load
-        storeTrackingParams();
-        
-        // Mobile menu functionality
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (menuToggle) {
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        }
-    });
+});
 </script>
 
 </body>
