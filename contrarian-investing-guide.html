@@ -281,9 +281,69 @@
             text-align: center;
         }
 
+        .cta-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .cta-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .cta-point h4 {
+            color: #B89676;
+            margin-bottom: 10px;
+        }
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        .cta-primary, .cta-secondary {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .cta-primary {
+            background-color: #B89676;
+            color: white;
+        }
+        .cta-primary:hover {
+            background-color: #a08464;
+            transform: translateY(-2px);
+        }
+        .cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .cta-secondary:hover {
+            background-color: white;
+            color: #1a365d;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
+            }
+            .cta-highlights {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .cta-primary, .cta-secondary {
+                display: block;
+                margin: 10px 0;
             }
 
             h1 {
@@ -424,6 +484,32 @@
         <p>The strategy works because markets are driven by human psychology and periodically create opportunities when fear or greed reach extremes. By systematically going against prevailing sentiment while conducting rigorous fundamental analysis, contrarian investors can potentially profit from market inefficiencies.</p>
 
         <p>Success in contrarian investing depends not just on identifying unpopular assets, but on distinguishing between temporary market pessimism and permanent fundamental deterioration. This requires deep research capabilities, strong risk management, and the psychological fortitude to maintain positions when conventional wisdom suggests otherwise.</p>
+
+        <!-- Call to Action Section -->
+        <div class="cta-section">
+            <h2>Learn More About Professional Contrarian Investment Management</h2>
+            <p>Glenorchy Capital specializes in contrarian investment strategies for sophisticated investors. Our approach combines deep fundamental analysis with anti-consensus positioning to identify compelling opportunities that others overlook.</p>
+
+            <div class="cta-highlights">
+                <div class="cta-point">
+                    <h4>Experienced Team</h4>
+                    <p>Led by investment professionals with decades of experience in contrarian and value investing approaches</p>
+                </div>
+                <div class="cta-point">
+                    <h4>Disciplined Process</h4>
+                    <p>Systematic approach to identifying undervalued assets and market inefficiencies</p>
+                </div>
+                <div class="cta-point">
+                    <h4>Accredited Investors</h4>
+                    <p>Serving qualified investors seeking alternative approaches to traditional portfolio construction</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://glenorchycapital.net" class="cta-primary">Explore Glenorchy Capital</a>
+                <a href="https://glenorchycapital.net/strategy" class="cta-secondary">View Our Investment Strategy</a>
+            </div>
+        </div>
 
         <div class="attribution">
             <p>This educational content is provided by <strong>Glenorchy Capital</strong>, a SEC-registered investment advisor specializing in contrarian deep value investing strategies. For qualified investors seeking professional management of contrarian investment strategies, consultation opportunities are available for accredited investors with $200,000+ investable assets.</p>

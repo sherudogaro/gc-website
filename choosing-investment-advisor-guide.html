@@ -272,9 +272,68 @@
             background-color: #f8f9fa;
             font-weight: 600;
         }
+        .cta-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5aa0 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .cta-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .cta-point h4 {
+            color: #B89676;
+            margin-bottom: 10px;
+        }
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        .cta-primary, .cta-secondary {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .cta-primary {
+            background-color: #B89676;
+            color: white;
+        }
+        .cta-primary:hover {
+            background-color: #a08464;
+            transform: translateY(-2px);
+        }
+        .cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .cta-secondary:hover {
+            background-color: white;
+            color: #1a365d;
+        }
         @media (max-width: 768px) {
             .container { padding: 20px; }
             .fee-comparison { grid-template-columns: 1fr; }
+            .cta-highlights {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .cta-primary, .cta-secondary {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -524,6 +583,32 @@
 
         <div class="highlight">
             <strong>Important Note:</strong> This guide provides general information about selecting investment advisors. Every investor's situation is unique, and you should carefully evaluate potential advisors based on your specific needs, goals, and circumstances. Consider consulting with multiple advisors before making your final decision.
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="cta-section">
+            <h2>Consider Glenorchy Capital for Your Investment Advisory Needs</h2>
+            <p>Glenorchy Capital is a SEC-registered investment advisor specializing in contrarian value strategies for sophisticated investors. Our disciplined approach and experienced team may be the right fit for discerning clients seeking alternative investment perspectives.</p>
+
+            <div class="cta-highlights">
+                <div class="cta-point">
+                    <h4>SEC-Registered RIA</h4>
+                    <p>Fully registered investment advisor held to fiduciary standards, putting client interests first</p>
+                </div>
+                <div class="cta-point">
+                    <h4>Contrarian Expertise</h4>
+                    <p>Specialized approach to identifying undervalued opportunities others overlook</p>
+                </div>
+                <div class="cta-point">
+                    <h4>Qualified Investors</h4>
+                    <p>Serving accredited investors with $200,000+ minimum seeking sophisticated strategies</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://glenorchycapital.net" class="cta-primary">Learn About Glenorchy Capital</a>
+                <a href="https://glenorchycapital.net/consultation" class="cta-secondary">Schedule a Consultation</a>
+            </div>
         </div>
     </div>
 
