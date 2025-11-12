@@ -704,7 +704,7 @@
             }
 
             .performance-table td:before {
-                text-align: left;
+                text-align: center;
             }
 
             .performance-table td {
@@ -715,7 +715,13 @@
                 border-bottom: none;
                 padding-top: 1rem;
                 font-weight: 700;
-                font-size: 1rem;
+                font-size: 1.125rem;
+                grid-template-columns: 1fr;
+            }
+
+            .performance-table td:last-child:before {
+                font-size: 1.125rem;
+                margin-bottom: 0.25rem;
             }
 
             .performance-table td:before {
