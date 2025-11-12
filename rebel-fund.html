@@ -693,8 +693,9 @@
             }
 
             .performance-table td {
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: 4rem 1fr;
+                gap: 1rem;
                 align-items: center;
                 padding: 0.5rem 0;
                 border: none;
@@ -714,7 +715,6 @@
                 content: attr(data-label);
                 font-weight: 600;
                 color: var(--glenorchy-navy);
-                margin-right: 1rem;
             }
 
             .performance-table .year-cell {
@@ -857,7 +857,7 @@
                             <td class="positive" data-label="Oct">4.12%</td>
                             <td class="empty-cell" data-label="Nov">-</td>
                             <td class="empty-cell" data-label="Dec">-</td>
-                            <td class="positive" data-label="Full Year">16.25%</td>
+                            <td class="positive" data-label="YTD">16.25%</td>
                         </tr>
                         <tr>
                             <td class="year-cell">2024</td>
