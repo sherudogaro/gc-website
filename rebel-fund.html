@@ -694,14 +694,21 @@
 
             .performance-table td {
                 display: grid;
-                grid-template-columns: 4rem 1fr;
+                grid-template-columns: 4rem auto;
                 gap: 1rem;
                 align-items: center;
                 padding: 0.5rem 0;
                 border: none;
                 border-bottom: 1px solid #e5e5e5;
-                text-align: left;
                 font-size: 0.875rem;
+            }
+
+            .performance-table td:before {
+                text-align: left;
+            }
+
+            .performance-table td {
+                text-align: center;
             }
 
             .performance-table td:last-child {
