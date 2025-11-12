@@ -134,6 +134,7 @@
         .fund-branding {
             margin-bottom: 1rem;
             position: relative;
+            margin-top: 2.5rem;
         }
 
         .glenorchy-label {
@@ -156,7 +157,7 @@
 
         .back-link {
             position: absolute;
-            top: 1rem;
+            top: 0.5rem;
             left: 1rem;
             color: var(--glenorchy-navy);
             text-decoration: none;
@@ -229,7 +230,7 @@
 
         .partnership-highlight h2 {
             color: white;
-            font-size: 2.5rem;
+            font-size: 1.75rem;
             margin-bottom: 1rem;
         }
 
@@ -665,15 +666,73 @@
             color: #654202;
         }
 
+        /* Mobile-responsive table cards */
         @media (max-width: 768px) {
-            .performance-table {
-                font-size: 0.7rem;
+            .performance-table-container h3 {
+                font-size: 1rem;
+                margin-bottom: 1rem;
             }
 
-            .performance-table th,
+            .performance-table thead {
+                display: none;
+            }
+
+            .performance-table,
+            .performance-table tbody,
+            .performance-table tr {
+                display: block;
+                width: 100%;
+            }
+
+            .performance-table tr {
+                margin-bottom: 1.5rem;
+                border: 2px solid var(--glenorchy-navy);
+                border-radius: 8px;
+                padding: 1rem;
+                background: #fafafa;
+            }
+
             .performance-table td {
-                padding: 0.4rem 0.25rem;
-                font-size: 0.7rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem 0;
+                border: none;
+                border-bottom: 1px solid #e5e5e5;
+                text-align: left;
+                font-size: 0.875rem;
+            }
+
+            .performance-table td:last-child {
+                border-bottom: none;
+                padding-top: 1rem;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+
+            .performance-table td:before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: var(--glenorchy-navy);
+                margin-right: 1rem;
+            }
+
+            .performance-table .year-cell {
+                font-size: 1.25rem;
+                font-weight: 700;
+                justify-content: center;
+                border-bottom: 2px solid var(--glenorchy-gold);
+                padding-bottom: 0.75rem;
+                margin-bottom: 0.5rem;
+                background: white;
+            }
+
+            .performance-table .year-cell:before {
+                display: none;
+            }
+
+            .performance-table tbody tr:hover {
+                background: #fafafa;
             }
         }
     </style>
@@ -754,50 +813,6 @@
         </div>
     </section>
 
-    <!-- Investment Strategy -->
-    <section class="strategy-section">
-        <div class="container">
-            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                <h2>Investment Strategy</h2>
-                <p style="font-size: 1.125rem; color: var(--charcoal);">
-                    Six core components drive our contrarian approach
-                </p>
-            </div>
-            
-            <div class="strategy-grid">
-                <div class="strategy-card">
-                    <h3>Deep Value</h3>
-                    <p>Search global financial markets for extremely out-of-favour sectors trading at deep discounts.</p>
-                </div>
-                
-                <div class="strategy-card">
-                    <h3>Reducing Risk</h3>
-                    <p>Invest in multiple high-target return positions to reduce overall portfolio risk through diversification.</p>
-                </div>
-                
-                <div class="strategy-card">
-                    <h3>Non-Correlated</h3>
-                    <p>Target positions with little correlation to major market indices, providing genuine portfolio diversification.</p>
-                </div>
-                
-                <div class="strategy-card">
-                    <h3>Arbitraging Impatience</h3>
-                    <p>Leverage our long-term investment horizon against short-term market pressures and impatience.</p>
-                </div>
-                
-                <div class="strategy-card">
-                    <h3>Theme-Based</h3>
-                    <p>Simultaneously pursue up to a dozen sectors and themes, capitalizing on multiple opportunity sets.</p>
-                </div>
-                
-                <div class="strategy-card">
-                    <h3>Asymmetry</h3>
-                    <p>Target 3:1 or better risk-return ratios from themes and sectors with asymmetric upside potential.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Performance Section -->
     <section class="performance-section">
         <div class="container">
@@ -830,35 +845,35 @@
                     <tbody>
                         <tr>
                             <td class="year-cell">2025</td>
-                            <td class="positive">2.29%</td>
-                            <td class="negative">-6.24%</td>
-                            <td class="positive">1.67%</td>
-                            <td class="negative">-2.37%</td>
-                            <td class="positive">6.72%</td>
-                            <td class="positive">1.63%</td>
-                            <td class="positive">1.52%</td>
-                            <td class="positive">2.30%</td>
-                            <td class="positive">4.10%</td>
-                            <td class="positive">4.12%</td>
-                            <td class="empty-cell">-</td>
-                            <td class="empty-cell">-</td>
-                            <td class="positive">16.25%</td>
+                            <td class="positive" data-label="Jan">2.29%</td>
+                            <td class="negative" data-label="Feb">-6.24%</td>
+                            <td class="positive" data-label="Mar">1.67%</td>
+                            <td class="negative" data-label="Apr">-2.37%</td>
+                            <td class="positive" data-label="May">6.72%</td>
+                            <td class="positive" data-label="Jun">1.63%</td>
+                            <td class="positive" data-label="Jul">1.52%</td>
+                            <td class="positive" data-label="Aug">2.30%</td>
+                            <td class="positive" data-label="Sep">4.10%</td>
+                            <td class="positive" data-label="Oct">4.12%</td>
+                            <td class="empty-cell" data-label="Nov">-</td>
+                            <td class="empty-cell" data-label="Dec">-</td>
+                            <td class="positive" data-label="Full Year">16.25%</td>
                         </tr>
                         <tr>
                             <td class="year-cell">2024</td>
-                            <td class="empty-cell">-</td>
-                            <td class="empty-cell">-</td>
-                            <td class="positive">6.74%</td>
-                            <td class="positive">0.96%</td>
-                            <td class="positive">6.06%</td>
-                            <td class="negative">-4.33%</td>
-                            <td class="positive">0.84%</td>
-                            <td class="negative">-2.70%</td>
-                            <td class="positive">2.95%</td>
-                            <td class="negative">-0.96%</td>
-                            <td class="positive">3.96%</td>
-                            <td class="negative">-2.19%</td>
-                            <td class="positive">11.25%</td>
+                            <td class="empty-cell" data-label="Jan">-</td>
+                            <td class="empty-cell" data-label="Feb">-</td>
+                            <td class="positive" data-label="Mar">6.74%</td>
+                            <td class="positive" data-label="Apr">0.96%</td>
+                            <td class="positive" data-label="May">6.06%</td>
+                            <td class="negative" data-label="Jun">-4.33%</td>
+                            <td class="positive" data-label="Jul">0.84%</td>
+                            <td class="negative" data-label="Aug">-2.70%</td>
+                            <td class="positive" data-label="Sep">2.95%</td>
+                            <td class="negative" data-label="Oct">-0.96%</td>
+                            <td class="positive" data-label="Nov">3.96%</td>
+                            <td class="negative" data-label="Dec">-2.19%</td>
+                            <td class="positive" data-label="Full Year">11.25%</td>
                         </tr>
                     </tbody>
                 </table>
@@ -866,6 +881,50 @@
                 <div class="performance-notes">
                     <p><strong>Performance Notes:</strong></p>
                     <p>* Net return data for Glenorchy Macro Value Fund (US) LLC (the "Fund") is prepared by its Manager and presented after the deduction of all applicable fees and expenses in place at the time, which were: a 2% management fee and 20% performance fee. Individual investor performance may vary due to factors such as investment timing and specific fee arrangements. As with any investment vehicle, past performance does not guarantee future results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Strategy -->
+    <section class="strategy-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2>Investment Strategy</h2>
+                <p style="font-size: 1.125rem; color: var(--charcoal);">
+                    Six core components drive our contrarian approach
+                </p>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h3>Deep Value</h3>
+                    <p>Search global financial markets for extremely out-of-favour sectors trading at deep discounts.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Reducing Risk</h3>
+                    <p>Invest in multiple high-target return positions to reduce overall portfolio risk through diversification.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Non-Correlated</h3>
+                    <p>Target positions with little correlation to major market indices, providing genuine portfolio diversification.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Arbitraging Impatience</h3>
+                    <p>Leverage our long-term investment horizon against short-term market pressures and impatience.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Theme-Based</h3>
+                    <p>Simultaneously pursue up to a dozen sectors and themes, capitalizing on multiple opportunity sets.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>Asymmetry</h3>
+                    <p>Target 3:1 or better risk-return ratios from themes and sectors with asymmetric upside potential.</p>
                 </div>
             </div>
         </div>
