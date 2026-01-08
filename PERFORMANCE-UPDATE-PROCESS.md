@@ -235,3 +235,74 @@ Dividend:
 - **Charts (Infogram iframes):** The actual chart data is NOT updated through this process. Charts are hosted on Infogram and updated separately.
 - **Annual rows (2020-2024):** These are historical and don't change month-to-month.
 - **Bear Market Protection card:** This is a historical 2022 stat and remains static.
+
+---
+
+## Rebel Fund (rebel-fund.html)
+
+**Data Source:** PDF from Jen (received from fund administrator Opus)
+
+### Step 1: Gather Data
+
+Jen receives a monthly PDF from Opus (fund admin) with the Rebel Fund monthly returns. The PDF contains:
+- Monthly net returns for each month
+- Full year cumulative return (when December data available)
+
+### Step 2: Update rebel-fund.html
+
+Location: Search for `class="performance-table"`
+
+The table has rows for each year (2024, 2025, etc.) with columns for each month plus Full Year.
+
+**For each month, update:**
+1. The percentage value
+2. The CSS class: `positive` for gains, `negative` for losses
+3. The `data-label` attribute (for mobile display)
+
+**Example row structure:**
+```html
+<tr>
+    <td class="year-cell">2025</td>
+    <td class="positive" data-label="Jan">2.29%</td>
+    <td class="negative" data-label="Feb">-6.24%</td>
+    <!-- ... other months ... -->
+    <td class="positive" data-label="Full Year">21.57%</td>
+</tr>
+```
+
+**For empty months (pre-inception or future):**
+```html
+<td class="empty-cell" data-label="Jan">-</td>
+```
+
+### Step 3: Verification
+
+- [ ] All monthly values match the PDF from Jen/Opus
+- [ ] CSS classes correct (positive/negative)
+- [ ] Full Year value updated (if December data included)
+- [ ] New year row added if needed (January of new year)
+
+---
+
+## Complete Monthly Checklist
+
+**Asymmetric & Dividend (from IBKR):**
+- [ ] All "as of" dates updated to new month
+- [ ] Asymmetric metric cards (4) updated
+- [ ] Dividend metric cards (4) updated
+- [ ] Asymmetric annualized table (5 rows) updated
+- [ ] Dividend annualized table (4 rows) updated
+- [ ] Asymmetric annual table YTD/Full Year row updated
+- [ ] Dividend annual table YTD/Full Year row updated
+- [ ] All 4 chart subtitles updated (2 per strategy)
+- [ ] Combined tab comparison values updated
+- [ ] Homepage snapshot updated (2 values)
+- [ ] Homepage strategy card updated (2 values)
+- [ ] CSS classes correct (positive/negative)
+- [ ] Test in browser - all 3 tabs work
+
+**Rebel Fund (from Jen/Opus PDF):**
+- [ ] Monthly returns updated
+- [ ] Full Year updated (if December)
+- [ ] CSS classes correct (positive/negative)
+- [ ] Test in browser - table displays correctly
