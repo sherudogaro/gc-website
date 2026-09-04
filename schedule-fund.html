@@ -129,6 +129,25 @@
             background: white;
         }
 
+        .calendar-fallback {
+            margin: 1.5rem auto 0;
+            max-width: 620px;
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--warm-grey);
+        }
+        .calendar-fallback a {
+            color: var(--glenorchy-gold);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--glenorchy-gold);
+        }
+        .calendar-fallback a:hover {
+            color: var(--glenorchy-dark-blue);
+            border-bottom-color: var(--glenorchy-dark-blue);
+        }
+
         .calendly-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -299,6 +318,13 @@
 <div class="calendly-inline-widget" data-url="https://calendly.com/d/cmmp-p8g-2vs/glenorchy-rebel-fund-introductory-call?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
+
+        <p class="calendar-fallback">
+            No calendar above? Some VPNs and content blockers stop it loading.
+            Email us instead at
+            <a href="mailto:admin@glenorchycapital.net?subject=Rebel%20Fund%20call">admin@glenorchycapital.net</a>
+            and we'll arrange a time directly.
+        </p>
         <!-- Calendly inline widget end -->
     </div>
 </section>
