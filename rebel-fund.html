@@ -300,6 +300,21 @@
             margin: 0 auto;
         }
 
+        .form-fallback {
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            text-align: center;
+            color: var(--off-white);
+            opacity: 0.75;
+        }
+        .form-fallback a {
+            color: var(--glenorchy-gold);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--glenorchy-gold);
+        }
+
         .form-title {
             color: var(--off-white);
             text-align: center;
@@ -1004,12 +1019,19 @@
         <div class="container">
             <div class="form-container">
                 <h2 class="form-title">Register & Book Your Call</h2>
-                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 2rem; color: var(--off-white); opacity: 0.9;">Tell us about yourself and we'll take you directly to our calendar to select your preferred consultation time.</p>
+                <p style="text-align: center; font-size: 1.125rem; margin-bottom: 2rem; color: var(--off-white); opacity: 0.9;">Fill in the form below and we'll take you directly to our calendar to select your preferred consultation time.</p>
 
                 <!-- Ontraport Form for Rebel Fund -->
                 <div style="background: white; padding: 1rem; border-radius: 8px; min-height: 547px;">
                     <script type='text/javascript' async='true' src='https://app.ontraport.com/js/ontraport/opt_assets/drivers/opf.js' data-opf-uid='p2c193653f72' data-opf-params='borderColor=#000000&borderSize=0px&embed=true&formHeight=547&formWidth=100%&popPosition=mc&instance=n586838321'></script>
                 </div>
+
+                <p class="form-fallback">
+                    No form above? Some VPNs and content blockers stop it loading.
+                    Email us instead at
+                    <a href="mailto:admin@glenorchycapital.net?subject=Rebel%20Fund%20enquiry">admin@glenorchycapital.net</a>
+                    and we'll arrange it directly.
+                </p>
 
                 <!--
                 BACKUP: Original Custom Rebel Fund Form (commented out for testing)

@@ -295,6 +295,23 @@
             cursor: not-allowed;
         }
 
+        .form-fallback {
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--warm-grey);
+        }
+        .form-fallback a {
+            color: var(--glenorchy-gold);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--glenorchy-gold);
+        }
+        .form-fallback a:hover {
+            color: var(--glenorchy-dark-blue);
+            border-bottom-color: var(--glenorchy-dark-blue);
+        }
+
         .form-disclaimer {
             margin-top: 1.5rem;
             font-size: 0.85rem;
@@ -558,13 +575,20 @@
                 <div class="contact-form-container">
                     <h2 class="form-title">Register & Book Your Call</h2>
                     <p class="form-subtitle">
-                        Tell us about yourself and we'll take you directly to our calendar to select your preferred consultation time.
+                        Fill in the form below and we'll take you directly to our calendar to select your preferred consultation time.
                     </p>
                     
                     <!-- TESTING: Ontraport Form (Can revert to custom form if needed) -->
                     <div style="background: white; padding: 1rem; border-radius: 8px; min-height: 547px;">
                         <script type='text/javascript' async='true' src='https://app.ontraport.com/js/ontraport/opt_assets/drivers/opf.js' data-opf-uid='p2c193653f71' data-opf-params='borderColor=#000000&borderSize=0px&embed=true&formHeight=547&formWidth=100%&popPosition=mc&instance=n586838321'></script>
                     </div>
+
+                    <p class="form-fallback">
+                        No form above? Some VPNs and content blockers stop it loading.
+                        Email us instead at
+                        <a href="mailto:admin@glenorchycapital.net?subject=Consultation%20request">admin@glenorchycapital.net</a>
+                        and we'll arrange it directly.
+                    </p>
 
                     <!--
                     BACKUP: Original Custom Form (commented out for testing)
